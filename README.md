@@ -1,8 +1,5 @@
-# React + Vite
+Simple Website for my music Project 'Envi'. Created with React + Vite.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Will host music, and other media (potentially VST presets/samples).
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+UNDER CONSTRUCTION....
