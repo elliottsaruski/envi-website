@@ -30,7 +30,7 @@ body {
   background-size: 225% 225%;
   background-repeat: repeat;
   overflow-y: hidden;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 a {
@@ -104,7 +104,7 @@ p {
   align-items: center;
   justify-content: center;
   font-style: italic;
-  font-family: 'Gruppo', sans-serif;
+  font-family: "Gruppo", sans-serif;
   font-weight: 400;
 }
 
@@ -116,33 +116,33 @@ p {
 }
 
 .music:hover::before {
-  content: 'MUSIC';
+  content: "MUSIC";
 }
 
 .music:hover::after {
-  content: 'MUSIC';
+  content: "MUSIC";
 }
 
 .media:hover::before {
-  content: 'MEDIA';
+  content: "MEDIA";
 }
 
 .media:hover::after {
-  content: 'MEDIA';
+  content: "MEDIA";
 }
 
 .about:hover::before {
-  content: 'ABOUT';
+  content: "ABOUT";
 }
 .about:hover::after {
-  content: 'ABOUT';
+  content: "ABOUT";
 }
 
 .contact:hover::before {
-  content: 'CONTACT';
+  content: "CONTACT";
 }
 .contact:hover::after {
-  content: 'CONTACT';
+  content: "CONTACT";
 }
 /* .contact:hover::before,
 .contact:hover::after {
@@ -192,10 +192,10 @@ p {
 }
 
 .logo-extra::before {
-  content: 'ENVI';
+  content: "ENVI";
   opacity: 65%;
   color: var(--clr-darkest-accent);
-  font-family: 'Gruppo', sans-serif;
+  font-family: "Gruppo", sans-serif;
 }
 
 /* ----------------------------------------top and bottom envi rows + addressing display for envi before,after text elements----------------- */
@@ -265,6 +265,7 @@ nav {
   user-select: none;
   margin-bottom: 1rem;
   position: relative;
+  background-color: var(--clr-darkest-accent);
 }
 
 .navItem p:hover,
@@ -328,6 +329,7 @@ nav {
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+    background-color: var(--clr-darkest-accent);
   }
   .mobile-logo--nav {
     display: flex;
@@ -354,7 +356,6 @@ nav {
     font-weight: 800;
   }
 
-
   /* ---------------mobile menu hamburger div */
   .mobile-menu-button {
     position: absolute;
@@ -371,19 +372,108 @@ nav {
 }
 /* ----------------------------------MUSIC PAGE---------------------------- */
 
+.music-header--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  gap: 1rem;
+  padding-block: 1rem;
+  color: whitesmoke;
+}
+
+.music-header--title {
+  font-size: 4rem;
+}
+
+.music-header--span {
+  padding-bottom: 2rem;
+}
 .musicPage--wrapper {
   color: whitesmoke;
-  margin: 0 auto;
-  display: flex;
-  height: 80dvh;
+  display: grid;
+  height: 50dvh;
+  padding: 1rem;
   overflow-y: scroll;
   overflow-x: hidden;
-  position: relative;
-  width: 95vw;
   scrollbar-width: thin;
   scrollbar-color: var(--clr-mid) var(--clr-darkest-accent);
-  justify-content: center;
   user-select: none;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(275px, 1fr));
+}
+
+.links--wrapper {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.links--wrapper a {
+  color: var(--clr-mid);
+  background-color: var(--clr-darkest-accent);
+  width: auto;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+}
+
+.links--wrapper a:hover {
+  color: whitesmoke;
+}
+
+.card {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 250px;
+  outline: 2px solid red;
+  margin: 0 auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.play-song-button {
+  height: 80%;
+  width: 100%;
+  top: 1rem;
+  background: transparent;
+  outline: none;
+  border: none;
+  background-image: url(https://s3.amazonaws.com/gather.fandalism.com/3000x3000%2D1109765%2D%2D53890214%2D2EB6%2D4863%2DAC6D2991F7F39BB5%2D%2D0%2D%2D3865219%2D%2DRETURNFINALCOVER.jpg);
+  background-size: cover;
+  color: var(--clr-mid);
+}
+
+.play-song-button:hover .faplay {
+  color: var(--clr-light);
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  bottom: 1rem;
+  padding-inline: 1rem;
+  padding-block: 0.25rem;
+  justify-content: left;
+  align-items: left;
+  background: var(--clr-darkest-accent);
+  width: 100%;
+}
+
+.song-title {
+  color: whitesmoke;
+  font-size: 2rem;
+}
+.song-links {
+  color: var(--clr-light);
+  text-decoration: underline;
+  font-size: 1.2rem;
 }
 
 /* ----------------------------FOOTER -----------------------*/
@@ -392,8 +482,8 @@ footer {
   font-size: 1em;
   width: 100vw;
   text-align: center;
-  position: absolute;
   bottom: 1rem;
+  height: 100%;
   color: var(--clr-light);
   pointer-events: none;
   user-select: none;
