@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
@@ -9,20 +9,19 @@ function NavBar() {
       <div className="mobile-menu-wrapper">
         {/* --------------------------------------Nav hamburger---------------------------------- */}
         <Link to="/" className="mobile-logo--nav">
-          ENVI
+          <b>ENVI</b>
         </Link>
         <button
           className="mobile-menu-button"
           onClick={() => {
             setHamburgerMenuOpen(!hamburgerMenuOpen);
-          }}
-        >
+          }}>
           <span className="ham-top"></span>
           <span className="ham-mid"></span>
           <span className="ham-bottom"></span>
         </button>
 
-        <nav className={hamburgerMenuOpen ? 'nav-mobile-open' : 'displayNone'}>
+        <nav className={hamburgerMenuOpen ? "nav-mobile-open" : "displayNone"}>
           <Link to="/music">
             <p>MUSIC</p>
           </Link>
@@ -42,25 +41,22 @@ function NavBar() {
 
       <nav className="nav-normal">
         <Link to="/" className="logo--nav">
-          ENVI
+          <b>ENVI</b>
         </Link>
-        <section className="nav-items-left--wrapper">
+        <section className="nav-items-right">
           <Link to="/music" id="music-nav-tab" className="music--nav navItem">
             <p>MUSIC</p>
           </Link>
           <Link to="/media" id="media-nav-tab" className="media--nav navItem">
             <p>MEDIA</p>
           </Link>
-        </section>
-        <section className="nav-items-right--wrapper">
           <Link to="/about" id="about-nav-tab" className="about--nav navItem">
             <p>ABOUT</p>
           </Link>
           <Link
             to="/contact"
             id="contact-nav-tab"
-            className="media--nav navItem"
-          >
+            className="media--nav navItem">
             <p>CONTACT</p>
           </Link>
         </section>
