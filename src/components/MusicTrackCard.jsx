@@ -1,21 +1,28 @@
 import { FaPlay } from "react-icons/fa";
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
 function MusicTrackCard({ id, title, artwork, src }) {
   return (
-    <div className="card" id={id}>
-      <img className="song-artwork" src={artwork} alt="song cover" />
+    <motion.div
+      layout
+      style={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: "ease" }}
+      className="card"
+      id={id}>
+      <motion.img className="song-artwork" src={artwork} alt="song cover" />
       <audio className="song-audio-src" src={src} />
-      <button className="play-song-button">
+      <motion.button className="play-song-button">
         <FaPlay className="faplay" style={{ scale: "5" }} />
-      </button>
-      <div className="song-info">
+      </motion.button>
+      <motion.div className="song-info">
         <p className="song-title">{title}</p>
         <a className="song-links" href="">
           Links
         </a>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 MusicTrackCard.propTypes = {
