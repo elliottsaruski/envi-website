@@ -1,14 +1,8 @@
-import React from 'react';
-import NavBar from './NavBar';
-import Footer from './Footer';
-
 function MediaPage() {
   return (
-    <>
-      <NavBar />
+    <section className="media--wrapper">
       <p>Media Page</p>
-      <Footer/>
-    </>
+    </section>
   );
 }
 

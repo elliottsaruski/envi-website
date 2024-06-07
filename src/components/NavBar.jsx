@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, MotionConfig, AnimatePresence, spring } from "framer-motion";
+import { motion, MotionConfig, AnimatePresence } from "framer-motion";
 
 function NavBar() {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
@@ -118,7 +118,7 @@ function NavBar() {
         <Link to="/" className="logo--nav">
           <b>ENVI</b>
         </Link>
-        <section className="nav-items-right">
+        <div className="nav-items-right">
           <Link to="/music" id="music-nav-tab" className="music--nav navItem">
             <p>MUSIC</p>
           </Link>
@@ -134,7 +134,7 @@ function NavBar() {
             className="media--nav navItem">
             <p>CONTACT</p>
           </Link>
-        </section>
+        </div>
       </nav>
     </>
   );
