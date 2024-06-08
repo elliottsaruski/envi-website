@@ -21,6 +21,7 @@ const myTracks = [
     id: 1,
     key: "RETURN",
     title: "RETURN",
+    album: "RETURN",
     artwork: returncover,
     src: "../assets/music/RETURN EP/RETURN.wav",
     links: {
@@ -35,6 +36,7 @@ const myTracks = [
     id: 2,
     key: "SERENITY",
     title: "SERENITY",
+    album: "RETURN",
     artwork: returncover,
     src: "../assets/music/RETURN EP/SERENITY.wav",
     links: {
@@ -50,6 +52,7 @@ const myTracks = [
     id: 3,
     key: "TREATMERIGHT",
     title: "TREATMERIGHT",
+    album: "RETURN",
     artwork: returncover,
     src: "../assets/music/RETURN EP/TREATMERIGHT.wav",
     links: {
@@ -65,6 +68,7 @@ const myTracks = [
     id: 4,
     key: "DWISEEU ",
     title: "DW, I SEE U (feat. Justin Scott)",
+    album: "RETURN",
     artwork: returncover,
     src: "../assets/music/RETURN EP/DW, I SEE U (FT. JUSTIN SCOTT).wav",
     links: {
@@ -80,6 +84,7 @@ const myTracks = [
     id: 5,
     key: "UNDERWATER ",
     title: "UNDERWATER",
+    album: "RETURN",
     artwork: returncover,
     src: "../assets/music/RETURN EP/UNDERWATER.wav",
     links: {
@@ -95,6 +100,7 @@ const myTracks = [
     id: 6,
     key: "EXPECTATIONS ",
     title: "EXPECTATIONS",
+    album: "RETURN",
     artwork: returncover,
     src: "../assets/music/RETURN EP/EXPECTATIONS.wav",
     links: {
@@ -128,6 +134,7 @@ const myTracks = [
     key: "HOME",
     title: "home (youth)",
     artwork: previousReleasesCover,
+    album: "Previous Releases",
     src: "../assets/music/previous-releases/home(youth).wav",
     links: {
       soundcloud: "https://soundcloud.com/envimusic/homee",
@@ -142,6 +149,7 @@ const myTracks = [
     key: "TRAPPED",
     title: "Trapped",
     artwork: previousReleasesCover,
+    album: "Previous Releases",
     src: "../assets/music/previous-releases/trapped.wav",
     links: {
       soundcloud: "https://soundcloud.com/envimusic/trapped",
@@ -155,6 +163,7 @@ const myTracks = [
     key: "FORGETFUL",
     title: "Forgetful",
     artwork: previousReleasesCover,
+    album: "Previous Releases",
     src: "../assets/music/previous-releases/forgetful.wav",
     links: {
       soundcloud: "https://soundcloud.com/envimusic/forgetful_envi",
@@ -169,6 +178,7 @@ const myTracks = [
     key: "URANG",
     title: "u rang?",
     artwork: previousReleasesCover,
+    album: "Previous Releases",
     src: "../assets/music/previous-releases/u rang.wav",
     links: {
       soundcloud: "https://soundcloud.com/envimusic/urang",
@@ -182,6 +192,7 @@ const myTracks = [
     key: "SWANGSET",
     title: "swangset",
     artwork: previousReleasesCover,
+    album: "Previous Releases",
     src: "../assets/music/previous-releases/swangset.wav",
     links: {
       soundcloud: "https://soundcloud.com/envimusic/swangset",
@@ -196,6 +207,7 @@ const myTracks = [
     key: "ABSTRACTTHOUGHTS",
     title: "Abstract Thoughts",
     artwork: previousReleasesCover,
+    album: "Previous Releases",
     src: "../assets/music/previous-releases/abstract thoughts.wav",
     links: {
       soundcloud: "https://soundcloud.com/envimusic/abstractthoughts",
@@ -210,6 +222,7 @@ const myTracks = [
     key: "COALESCENCE",
     title: "Coalescence",
     artwork: previousReleasesCover,
+    album: "Previous Releases",
     src: "../assets/music/previous-releases/coalescence.wav",
     links: {
       soundcloud: "https://soundcloud.com/envimusic/coalescence",
@@ -225,6 +238,7 @@ const myTracks = [
     id: 15,
     key: "HT2",
     title: "heds tape 2 (sub)",
+    album: "Heds Tapes",
     artwork: genericHedsCover,
     src: "../assets/music/heds/HT2-envi.wav",
     links: {
@@ -235,6 +249,7 @@ const myTracks = [
     id: 16,
     key: "HT3",
     title: "heds tape 3 (submission)",
+    album: "Heds Tapes",
     artwork: ht3Cover,
     src: "../assets/music/heds/HT3-envi.wav",
     links: {
@@ -246,6 +261,7 @@ const myTracks = [
     id: 17,
     key: "HT4",
     title: "heds tape 4 (submission)",
+    album: "Heds Tapes",
     artwork: ht4Cover,
     src: "../assets/music/heds/HT4-envi.wav",
     links: {
@@ -257,6 +273,7 @@ const myTracks = [
     id: 18,
     key: "HT5",
     title: "heds tape 5 (submission)",
+    album: "Heds Tapes",
     artwork: ht5Cover,
     src: "../assets/music/heds/HT5-envi.wav",
     links: {
@@ -268,6 +285,7 @@ const myTracks = [
     id: 19,
     key: "HT6",
     title: "heds tape 6 (on tape)",
+    album: "Heds Tapes",
     artwork: ht6Cover,
     src: "../assets/music/heds/HT6-envi.wav",
     links: {
@@ -280,6 +298,7 @@ const myTracks = [
     id: 20,
     key: "HT7",
     title: "heds tape 7 (submission)",
+    album: "Heds Tapes",
     artwork: ht7Cover,
     src: "../assets/music/heds/HT7-envi.wav",
     links: {
@@ -291,6 +310,7 @@ const myTracks = [
     id: 21,
     key: "HT8",
     title: "heds tape 8 (submission)",
+    album: "Heds Tapes",
     artwork: ht8Cover,
     src: "../assets/music/heds/HT8-envi.wav",
     links: {
@@ -302,6 +322,7 @@ const myTracks = [
     id: 22,
     key: "HT9",
     title: "heds tape 9 (on tape)",
+    album: "Heds Tapes",
     artwork: ht9Cover,
     src: "../assets/music/heds/HT9-envi.wav",
     links: {
@@ -313,6 +334,7 @@ const myTracks = [
     id: 23,
     key: "HT10",
     title: "heds tape 10 (on tape)",
+    album: "Heds Tapes",
     artwork: ht10Cover,
     src: "../assets/music/heds/HT10-envi.wav",
     links: {
@@ -324,6 +346,7 @@ const myTracks = [
     id: 24,
     key: "HT11",
     title: "heds tape 11 (on tape)",
+    album: "Heds Tapes",
     artwork: ht11Cover,
     src: "../assets/music/heds/HT11-envi.wav",
     links: {
@@ -335,6 +358,7 @@ const myTracks = [
     id: 25,
     key: "HT12",
     title: "heds tape 12 (submission)",
+    album: "Heds Tapes",
     artwork: ht12Cover,
     src: "../assets/music/heds/HT12-envi.wav",
     links: {
@@ -346,6 +370,7 @@ const myTracks = [
     id: 26,
     key: "HT13",
     title: "heds tape 13 (on tape)",
+    album: "Heds Tapes",
     artwork: genericHedsCover,
     src: "../assets/music/heds/HT13-envi.wav",
     links: {
@@ -357,6 +382,7 @@ const myTracks = [
     id: 27,
     key: "HT14",
     title: "heds tape 14 (on tape)",
+    album: "Heds Tapes",
     artwork: ht14Cover,
     src: "../assets/music/heds/HT14-envi.wav",
     links: {
@@ -368,6 +394,7 @@ const myTracks = [
     id: 28,
     key: "HT15",
     title: "heds tape 15 (submission)",
+    album: "Heds Tapes",
     artwork: ht15Cover,
     src: "../assets/music/heds/HT15-envi.wav",
     links: {

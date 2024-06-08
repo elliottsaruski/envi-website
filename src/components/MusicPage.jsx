@@ -8,17 +8,23 @@ function MusicPage() {
         key={track.key}
         id={track.id}
         title={track.title}
+        album={track.album}
         artwork={track.artwork}
         src={track.src}
-        links={track.links}
       />
     );
   });
 
   return (
     <section id="full-music-page">
-      {/* --------------------RENDER LIST OF TRACKS ------------*/}
-      <div className="music--wrapper">{musicList}</div>
+      <img src="" alt="" />
+      <table className="music-list">
+        <tr>
+          <th>Song</th>
+          <th>Album</th>
+        </tr>
+        {musicList}
+      </table>
     </section>
   );
 }

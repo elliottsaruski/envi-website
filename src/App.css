@@ -209,21 +209,33 @@ nav {
 
 #full-music-page {
   color: var(--clr-light);
+  /* height: 100%; */
+  overflow-y: hidden;
+  border: 1px solid var(--clr-light);
+  margin: 5rem;
 }
 
+
+
+#envipic {
+  height: 20rem;
+}
+/* .song-artwork {
+  height: 20rem;
+} */
+
 /* keep */
-.music--wrapper {
+/* .music--wrapper {
   background-color: var(--clr-darkest-accent);
   color: var(--clr-light);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   gap: 1rem 1rem;
   user-select: none;
-}
+} */
 
 /* ----------------------------------MUSIC CARDS---------------------------- */
-
-.card {
+/* .card {
   display: flex;
   flex-direction: column;
   height: 15rem;
@@ -274,7 +286,7 @@ nav {
   color: var(--clr-light);
   text-decoration: underline;
   font-size: 1.2rem;
-}
+} */
 
 /* ----------------------------ABOUT PAGE -----------------------*/
 
