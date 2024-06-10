@@ -106,7 +106,7 @@ function NavBar() {
                 <motion.p variants={VAR.navItem}>ABOUT</motion.p>
               </Link>
               <Link to="/contact">
-                <motion.p variants={VAR.navItem}>CONTACT</motion.p>
+                <motion.p variants={VAR.navItem}>MUSIC RESOURCES</motion.p>
               </Link>
             </motion.nav>
           </AnimatePresence>
@@ -129,10 +129,10 @@ function NavBar() {
             <p>ABOUT</p>
           </Link>
           <Link
-            to="/contact"
-            id="contact-nav-tab"
+            to="/musicresources"
+            id="music-resources-nav-tab"
             className="media--nav navItem">
-            <p>CONTACT</p>
+            <p>MUSIC RESOURCES</p>
           </Link>
         </div>
       </nav>

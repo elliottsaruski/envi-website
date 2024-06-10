@@ -7,7 +7,7 @@ import HomePage from "./components/HomePage.jsx";
 import MusicPage from "./components/MusicPage.jsx";
 import MediaPage from "./components/MediaPage.jsx";
 import AboutPage from "./components/AboutPage.jsx";
-import ContactPage from "./components/ContactPage.jsx";
+import MusicResourcesPage from "./components/MusicResourcesPage.jsx";
 import Layout from "./components/Layout.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -19,7 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/music" element={<MusicPage />} />
           <Route path="/media" element={<MediaPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/musicresources" element={<MusicResourcesPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

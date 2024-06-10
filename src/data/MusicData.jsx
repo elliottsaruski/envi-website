@@ -1,3 +1,4 @@
+//----------------ARTWORK IMPORT
 import returncover from "../assets/music/artworks/RETURN art.jpg";
 import ghostLoveCover from "../assets/music/artworks/GHOST LOVE COVER.jpg";
 import previousReleasesCover from "../assets/music/artworks/previousReleasesCover.jpg";
@@ -12,10 +13,25 @@ import ht9Cover from "../assets/music/artworks/tape covers/ht9.png";
 import ht10Cover from "../assets/music/artworks/tape covers/ht10.png";
 import ht11Cover from "../assets/music/artworks/tape covers/ht11.png";
 import ht12Cover from "../assets/music/artworks/tape covers/ht12.png";
-// import ht13Cover from "../assets/music/artworks/tape covers/ht13.gif";
 import ht14Cover from "../assets/music/artworks/tape covers/ht14.png";
 import ht15Cover from "../assets/music/artworks/tape covers/ht15.png";
 
+//----------------AUDIO IMPORT
+import returnsrc from "../assets/music/RETURN EP/RETURN.wav";
+import serenitysrc from "../assets/music/RETURN EP/SERENITY.wav";
+import treatmerightsrc from "../assets/music/RETURN EP/TREATMERIGHT.wav";
+import dwiseeusrc from "../assets/music/RETURN EP/dwiseeu.wav";
+import underwatersrc from "../assets/music/RETURN EP/UNDERWATER.wav";
+import expectationssrc from "../assets/music/RETURN EP/EXPECTATIONS.wav";
+
+import ghostlovesrc from "../assets/music/previous-releases/Ghost Love w sleepless&lorn.wav";
+
+import homesrc from "../assets/music/previous-releases/home-youth.wav";
+import trappedsrc from "../assets/music/previous-releases/trapped.wav";
+import forgetfulsrc from "../assets/music/previous-releases/forgetful.wav";
+import urangsrc from "../assets/music/previous-releases/u rang.wav";
+
+//------------------------ARRAY
 const myTracks = [
   {
     id: 1,
@@ -23,7 +39,7 @@ const myTracks = [
     title: "RETURN",
     album: "RETURN",
     artwork: returncover,
-    src: "../assets/music/RETURN EP/RETURN.wav",
+    src: returnsrc,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/return?in=envimusic/sets/return-ep",
@@ -38,7 +54,7 @@ const myTracks = [
     title: "SERENITY",
     album: "RETURN",
     artwork: returncover,
-    src: "../assets/music/RETURN EP/SERENITY.wav",
+    src: serenitysrc,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/serenity?in=envimusic/sets/return-ep",
@@ -54,7 +70,7 @@ const myTracks = [
     title: "TREATMERIGHT",
     album: "RETURN",
     artwork: returncover,
-    src: "../assets/music/RETURN EP/TREATMERIGHT.wav",
+    src: treatmerightsrc,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/treatmeright1?in=envimusic/sets/return-ep",
@@ -70,7 +86,7 @@ const myTracks = [
     title: "DW, I SEE U (feat. Justin Scott)",
     album: "RETURN",
     artwork: returncover,
-    src: "../assets/music/RETURN EP/DW, I SEE U (FT. JUSTIN SCOTT).wav",
+    src: dwiseeusrc,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/dw-i-see-u?in=envimusic/sets/return-ep",
@@ -86,7 +102,7 @@ const myTracks = [
     title: "UNDERWATER",
     album: "RETURN",
     artwork: returncover,
-    src: "../assets/music/RETURN EP/UNDERWATER.wav",
+    src: underwatersrc,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/underwater?in=envimusic/sets/return-ep",
@@ -102,7 +118,7 @@ const myTracks = [
     title: "EXPECTATIONS",
     album: "RETURN",
     artwork: returncover,
-    src: "../assets/music/RETURN EP/EXPECTATIONS.wav",
+    src: expectationssrc,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/expectations-1?in=envimusic/sets/return-ep",
@@ -112,14 +128,13 @@ const myTracks = [
         "https://music.apple.com/us/album/expectations/1647497906?i=1647497919",
     },
   },
-
   //---------------------------------GHOST LOVE----------------
   {
     id: 7,
     key: "GHOSTLOVE ",
     title: "Ghost Love w/ sleepless & lorn",
     artwork: ghostLoveCover,
-    src: "../assets/music/previous-releases/Ghost Love w sleepless&lorn.wav",
+    src: ghostlovesrc,
     links: {
       spotify:
         "https://open.spotify.com/track/7fc9S43kYNxBWuf4isrI0d?si=5a85a2f9df464fdd",
@@ -127,7 +142,6 @@ const myTracks = [
         "https://music.apple.com/us/album/ghost-love/1449368707?i=1449368710",
     },
   },
-
   //---------------------------------PREVIOUS RELEASES----------------
   {
     id: 8,
@@ -135,7 +149,7 @@ const myTracks = [
     title: "home (youth)",
     artwork: previousReleasesCover,
     album: "Previous Releases",
-    src: "../assets/music/previous-releases/home(youth).wav",
+    src: homesrc,
     links: {
       soundcloud: "https://soundcloud.com/envimusic/homee",
       spotify:
@@ -150,7 +164,7 @@ const myTracks = [
     title: "Trapped",
     artwork: previousReleasesCover,
     album: "Previous Releases",
-    src: "../assets/music/previous-releases/trapped.wav",
+    src: trappedsrc,
     links: {
       soundcloud: "https://soundcloud.com/envimusic/trapped",
       spotify:
@@ -164,7 +178,7 @@ const myTracks = [
     title: "Forgetful",
     artwork: previousReleasesCover,
     album: "Previous Releases",
-    src: "../assets/music/previous-releases/forgetful.wav",
+    src: forgetfulsrc,
     links: {
       soundcloud: "https://soundcloud.com/envimusic/forgetful_envi",
       spotify:
@@ -179,7 +193,7 @@ const myTracks = [
     title: "u rang?",
     artwork: previousReleasesCover,
     album: "Previous Releases",
-    src: "../assets/music/previous-releases/u rang.wav",
+    src: urangsrc,
     links: {
       soundcloud: "https://soundcloud.com/envimusic/urang",
       spotify:
