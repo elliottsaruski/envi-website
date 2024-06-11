@@ -16,58 +16,53 @@ function MusicPage() {
   return (
     <div id="full-music-page">
       <div className="audio-player-np-img">
-        <img src={artworkThumbnail} alt="" />
         <div id="audio-player">
+          <img src={artworkThumbnail} alt="" />
           <div id="now-playing-details">
             <h3>{albumTitle}</h3>
             <h2>{songTitle}</h2>
             <h3>envi</h3>
           </div>
-          <audio ref={audioRef} controls autoPlay src={audioSrc}></audio>
-          {/* <button>prev</button>
-          <button
-            onClick={() => {
-              isAudioPlaying
-                ? audioRef.current.pause() + setIsAudioPlaying(false)
-                : audioRef.current.play() + setIsAudioPlaying(true);
-            }}>
-            play
-          </button>
-          <button>next</button> */}
+          <audio
+            ref={audioRef}
+            controls
+            controlsList="noplaybackrate nodownload"
+            autoPlay
+            src={audioSrc}></audio>
         </div>
-      </div>
 
-      <table className="music-list">
-        {myTracks.map((track) => {
-          return (
-            <tbody
-              key={track.id}
-              id="table-item"
-              onClick={() => {
-                setArtworkThumbnail(track.artwork);
-                setAudioSrc(track.src);
-                setSongTitle(track.title);
-                setAlbumTitle(track.album);
-                // setIsAudioPlaying(true);
-                window.scrollTo(0, 100);
-              }}>
-              <tr className="table-track-row">
-                <td>
-                  <img
-                    src={track.artwork}
-                    alt="track-artwork-thumbnail"
-                    id="track-artwork-thumbnail"
-                  />
-                </td>
-                <td id="track-details">
-                  <p id="track-title">{track.title}</p>
-                  <p id="track-album">{track.album}</p>
-                </td>
-              </tr>
-            </tbody>
-          );
-        })}
-      </table>
+        <table className="music-list">
+          {myTracks.map((track) => {
+            return (
+              <tbody
+                key={track.id}
+                id="table-item"
+                onClick={() => {
+                  setArtworkThumbnail(track.artwork);
+                  setAudioSrc(track.src);
+                  setSongTitle(track.title);
+                  setAlbumTitle(track.album);
+                  // setIsAudioPlaying(true);
+                  window.scrollTo(0, 100);
+                }}>
+                <tr className="table-track-row">
+                  <td>
+                    <img
+                      src={track.artwork}
+                      alt="track-artwork-thumbnail"
+                      id="track-artwork-thumbnail"
+                    />
+                  </td>
+                  <td id="track-details">
+                    <p id="track-title">{track.title}</p>
+                    <p id="track-album">{track.album}</p>
+                  </td>
+                </tr>
+              </tbody>
+            );
+          })}
+        </table>
+      </div>
     </div>
   );
 }

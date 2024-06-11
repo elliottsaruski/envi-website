@@ -30,6 +30,24 @@ import homesrc from "../assets/music/previous-releases/home-youth.wav";
 import trappedsrc from "../assets/music/previous-releases/trapped.wav";
 import forgetfulsrc from "../assets/music/previous-releases/forgetful.wav";
 import urangsrc from "../assets/music/previous-releases/u rang.wav";
+import swangsetsrc from "../assets/music/previous-releases/swangset.wav";
+import abstractsrc from "../assets/music/previous-releases/abstract thoughts.wav";
+import coalsrc from "../assets/music/previous-releases/coalescence.wav";
+
+import ht2 from "../assets/music/heds/HT2-envi.wav";
+import ht3 from "../assets/music/heds/HT3-envi.wav";
+import ht4 from "../assets/music/heds/HT4-envi.wav";
+import ht5 from "../assets/music/heds/HT5-envi.wav";
+import ht6 from "../assets/music/heds/HT6-envi.wav";
+import ht7 from "../assets/music/heds/HT7-envi.wav";
+import ht8 from "../assets/music/heds/HT8-envi.wav";
+import ht9 from "../assets/music/heds/HT9-envi.wav";
+import ht10 from "../assets/music/heds/HT10-envi.wav";
+import ht11 from "../assets/music/heds/HT11-envi.wav";
+import ht12 from "../assets/music/heds/HT12-envi.wav";
+import ht13 from "../assets/music/heds/HT13-envi.wav";
+import ht14 from "../assets/music/heds/HT14-envi.wav";
+import ht15 from "../assets/music/heds/HT15-envi.wav";
 
 //------------------------ARRAY
 const myTracks = [
@@ -207,7 +225,7 @@ const myTracks = [
     title: "swangset",
     artwork: previousReleasesCover,
     album: "Previous Releases",
-    src: "../assets/music/previous-releases/swangset.wav",
+    src: swangsetsrc,
     links: {
       soundcloud: "https://soundcloud.com/envimusic/swangset",
       spotify:
@@ -222,7 +240,7 @@ const myTracks = [
     title: "Abstract Thoughts",
     artwork: previousReleasesCover,
     album: "Previous Releases",
-    src: "../assets/music/previous-releases/abstract thoughts.wav",
+    src: abstractsrc,
     links: {
       soundcloud: "https://soundcloud.com/envimusic/abstractthoughts",
       spotify:
@@ -237,7 +255,7 @@ const myTracks = [
     title: "Coalescence",
     artwork: previousReleasesCover,
     album: "Previous Releases",
-    src: "../assets/music/previous-releases/coalescence.wav",
+    src: coalsrc,
     links: {
       soundcloud: "https://soundcloud.com/envimusic/coalescence",
       spotify:
@@ -254,7 +272,7 @@ const myTracks = [
     title: "heds tape 2 (sub)",
     album: "Heds Tapes",
     artwork: genericHedsCover,
-    src: "../assets/music/heds/HT2-envi.wav",
+    src: ht2,
     links: {
       soundcloud: null,
     },
@@ -265,7 +283,7 @@ const myTracks = [
     title: "heds tape 3 (submission)",
     album: "Heds Tapes",
     artwork: ht3Cover,
-    src: "../assets/music/heds/HT3-envi.wav",
+    src: ht3,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht3-envi-sub?in=envimusic/sets/heds-tape-subs",
@@ -277,7 +295,7 @@ const myTracks = [
     title: "heds tape 4 (submission)",
     album: "Heds Tapes",
     artwork: ht4Cover,
-    src: "../assets/music/heds/HT4-envi.wav",
+    src: ht4,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht4-envi-sub?in=envimusic/sets/heds-tape-subs",
@@ -289,7 +307,7 @@ const myTracks = [
     title: "heds tape 5 (submission)",
     album: "Heds Tapes",
     artwork: ht5Cover,
-    src: "../assets/music/heds/HT5-envi.wav",
+    src: ht5,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht5-envi-sub?in=envimusic/sets/heds-tape-subs",
@@ -301,7 +319,7 @@ const myTracks = [
     title: "heds tape 6 (on tape)",
     album: "Heds Tapes",
     artwork: ht6Cover,
-    src: "../assets/music/heds/HT6-envi.wav",
+    src: ht6,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht6-envi-on-tape?in=envimusic/sets/heds-tape-subs",
@@ -314,7 +332,7 @@ const myTracks = [
     title: "heds tape 7 (submission)",
     album: "Heds Tapes",
     artwork: ht7Cover,
-    src: "../assets/music/heds/HT7-envi.wav",
+    src: ht7,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht7-envi-sub?in=envimusic/sets/heds-tape-subs",
@@ -326,7 +344,7 @@ const myTracks = [
     title: "heds tape 8 (submission)",
     album: "Heds Tapes",
     artwork: ht8Cover,
-    src: "../assets/music/heds/HT8-envi.wav",
+    src: ht8,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht8-envi-sub?in=envimusic/sets/heds-tape-subs",
@@ -338,7 +356,7 @@ const myTracks = [
     title: "heds tape 9 (on tape)",
     album: "Heds Tapes",
     artwork: ht9Cover,
-    src: "../assets/music/heds/HT9-envi.wav",
+    src: ht9,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht9-envi-on-tape?in=envimusic/sets/heds-tape-subs",
@@ -350,7 +368,7 @@ const myTracks = [
     title: "heds tape 10 (on tape)",
     album: "Heds Tapes",
     artwork: ht10Cover,
-    src: "../assets/music/heds/HT10-envi.wav",
+    src: ht10,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht10-envi-on-tape?in=envimusic/sets/heds-tape-subs",
@@ -362,7 +380,7 @@ const myTracks = [
     title: "heds tape 11 (on tape)",
     album: "Heds Tapes",
     artwork: ht11Cover,
-    src: "../assets/music/heds/HT11-envi.wav",
+    src: ht11,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht11-envi-on-tape?in=envimusic/sets/heds-tape-subs",
@@ -374,7 +392,7 @@ const myTracks = [
     title: "heds tape 12 (submission)",
     album: "Heds Tapes",
     artwork: ht12Cover,
-    src: "../assets/music/heds/HT12-envi.wav",
+    src: ht12,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht12-envi-sub?in=envimusic/sets/heds-tape-subs",
@@ -386,7 +404,7 @@ const myTracks = [
     title: "heds tape 13 (on tape)",
     album: "Heds Tapes",
     artwork: genericHedsCover,
-    src: "../assets/music/heds/HT13-envi.wav",
+    src: ht13,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht13-envi-on-tape?in=envimusic/sets/heds-tape-subs",
@@ -398,7 +416,7 @@ const myTracks = [
     title: "heds tape 14 (on tape)",
     album: "Heds Tapes",
     artwork: ht14Cover,
-    src: "../assets/music/heds/HT14-envi.wav",
+    src: ht14,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht14-envi-on-tape?in=envimusic/sets/heds-tape-subs",
@@ -410,7 +428,7 @@ const myTracks = [
     title: "heds tape 15 (submission)",
     album: "Heds Tapes",
     artwork: ht15Cover,
-    src: "../assets/music/heds/HT15-envi.wav",
+    src: ht15,
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht15-envi-sub?in=envimusic/sets/heds-tape-subs",

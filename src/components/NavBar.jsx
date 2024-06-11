@@ -64,7 +64,7 @@ function NavBar() {
         <motion.div className="mobile-menu-wrapper">
           {/* --------------------------------------Nav hamburger---------------------------------- */}
           <Link to="/" className="mobile-logo--nav">
-            <b>ENVI</b>
+            <h1>ENVI</h1>
           </Link>
           <motion.button
             initial={false}
@@ -116,7 +116,7 @@ function NavBar() {
 
       <nav className="nav-normal">
         <Link to="/" className="logo--nav">
-          <b>ENVI</b>
+          <h1>ENVI</h1>
         </Link>
         <div className="nav-items-right">
           <Link to="/music" id="music-nav-tab" className="music--nav navItem">
