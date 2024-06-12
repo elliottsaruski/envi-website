@@ -1,7 +1,11 @@
 import myMedia from "../data/MediaData";
 
 const mediaList = myMedia.map((media) => {
-  return <img key={media.id} src={media.src} alt={media.title} />;
+  if (media.mediaType == "image") {
+    return <img key={media.id} src={media.src} alt={media.title} />;
+  } else if (media.mediaType == "video") {
+    return <video key={media.id} src={media.src} alt={media.title} controls />;
+  }
 });
 
 function MediaPage() {

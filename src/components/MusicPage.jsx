@@ -14,38 +14,37 @@ function MusicPage() {
   const audioRef = useRef();
 
   return (
-    <div id="full-music-page">
-      <div className="audio-player-np-img">
-        <div id="audio-player">
-          <img src={artworkThumbnail} alt="" />
-          <div id="now-playing-details">
-            <h3>{albumTitle}</h3>
-            <h2>{songTitle}</h2>
-            <h3>envi</h3>
-          </div>
-          <audio
-            ref={audioRef}
-            controls
-            controlsList="noplaybackrate nodownload"
-            autoPlay
-            src={audioSrc}></audio>
+    <div id="audioplayer">
+      <div className="audio-player-left">
+        <img src={artworkThumbnail} alt="song artwork" />
+        <div id="now-playing-details">
+          <h3>{albumTitle}</h3>
+          <h2>{songTitle}</h2>
+          <h3>envi</h3>
         </div>
-
+        <audio
+          ref={audioRef}
+          controls
+          controlsList="noplaybackrate nodownload"
+          autoPlay
+          src={audioSrc}></audio>
+      </div>
+      <div className="table-wrapper">
         <table className="music-list">
-          {myTracks.map((track) => {
-            return (
-              <tbody
-                key={track.id}
-                id="table-item"
-                onClick={() => {
-                  setArtworkThumbnail(track.artwork);
-                  setAudioSrc(track.src);
-                  setSongTitle(track.title);
-                  setAlbumTitle(track.album);
-                  // setIsAudioPlaying(true);
-                  window.scrollTo(0, 100);
-                }}>
-                <tr className="table-track-row">
+          <tbody>
+            {myTracks.map((track) => {
+              return (
+                <tr
+                  className="table-track-row"
+                  key={track.id}
+                  id="table-item"
+                  onClick={() => {
+                    setArtworkThumbnail(track.artwork);
+                    setAudioSrc(track.src);
+                    setSongTitle(track.title);
+                    setAlbumTitle(track.album);
+                    // setIsAudioPlaying(true);
+                  }}>
                   <td>
                     <img
                       src={track.artwork}
@@ -58,9 +57,9 @@ function MusicPage() {
                     <p id="track-album">{track.album}</p>
                   </td>
                 </tr>
-              </tbody>
-            );
-          })}
+              );
+            })}
+          </tbody>
         </table>
       </div>
     </div>

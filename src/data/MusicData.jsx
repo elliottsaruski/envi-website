@@ -151,6 +151,7 @@ const myTracks = [
     id: 7,
     key: "GHOSTLOVE ",
     title: "Ghost Love w/ sleepless & lorn",
+    album: "Ghost Love",
     artwork: ghostLoveCover,
     src: ghostlovesrc,
     links: {
