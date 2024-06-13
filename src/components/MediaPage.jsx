@@ -9,7 +9,11 @@ const mediaList = myMedia.map((media) => {
 });
 
 function MediaPage() {
-  return <section className="media--wrapper">{mediaList}</section>;
+  return (
+    <section className="media--wrapper">
+      <div className="media-inner-wrapper">{mediaList}</div>
+    </section>
+  );
 }
 
 export default MediaPage;

@@ -43,12 +43,23 @@ p {
 }
 
 #FULL_APP {
-  overflow-x: hidden;
+  display: flex;
+  height: 100svh;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  /* height: 100svh; */
+  /* overflow: hidden; */
 }
 
 .layout-div section {
   padding-block: 5rem;
   padding-inline: 5rem;
+  /* width: 80svw; */
+  /* flex: 1; */
 }
 /* ----------------------------------------HOME----------------- */
 .home-wrapper {
@@ -56,11 +67,11 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100dvw;
+  /* width: 100dvw; */
   margin: 0 auto;
   height: 100dvh;
   overflow: hidden;
-  flex: 6;
+  /* flex: 6; */
   color: var(--clr-light);
 }
 
@@ -74,19 +85,23 @@ p {
 
 /* -----------navbar ---------------------------- */
 
-nav {
-  display: flex;
+.nav-wrapper {
+  display: grid;
   list-style: none;
   color: var(--clr-light);
   align-items: baseline;
+  align-content: start;
   user-select: none;
   position: relative;
+  height: 100dvh;
+  width: 20svw;
+  background-color: var(--clr-darkest-accent);
+  padding-inline: 1rem;
+  gap: 2rem;
 }
 
-.nav-normal {
-  display: flex;
-  padding-inline: 1rem;
-}
+/* nav {
+} */
 
 .navItem p:hover,
 .navItem p:focus-visible {
@@ -95,7 +110,7 @@ nav {
 
 .logo--nav {
   display: flex;
-  flex: 1;
+  /* flex: 1; */
   font-size: 4rem;
   color: var(--clr-light);
   width: min-content;
@@ -108,15 +123,17 @@ nav {
 }
 
 .nav-items-right {
-  display: flex;
-  flex: auto;
+  display: grid;
+  /* flex: auto; */
   font-size: 1.2rem;
+  margin-top: 2rem;
+  padding-left: 0.25rem;
 }
 
 .navItem {
   display: flex;
   flex: auto;
-  justify-content: end;
+  justify-content: start;
 }
 
 .activeItem {
@@ -127,32 +144,71 @@ nav {
   display: none;
 }
 
+.links {
+  display: flex;
+  gap: 1rem;
+  padding-left: 0.25rem;
+}
+.music-link {
+  color: var(--clr-light);
+}
+
+.about--span {
+  line-height: 2;
+}
+
 /* ----------------------------------MUSIC PAGE---------------------------- */
 
 #audioplayer {
   display: flex;
-  border: 0.25rem solid rgba(138, 136, 136, 0.363);
-  border-radius: 10px;
-  height: 75svh;
+  /* outline: 0.25rem solid rgba(138, 136, 136, 0.363); */
+  height: 100svh;
   width: 80svw;
-  padding: 1rem;
-  overflow: hidden;
-  margin: 1rem auto;
-  /* padding-top: 2rem; */
 }
 
 .audio-player-left {
   display: flex;
   flex-direction: column;
-  flex: 1.25;
-  flex-shrink: 0;
-  flex-grow: 1;
+  /* flex: 1.25; */
+  /* flex-shrink: 1; */
+  /* flex-grow: 1; */
 
   img {
-    width: 100%;
+    /* width: 100%; */
+    height: 50%;
     aspect-ratio: 1;
     /* height: auto; */
     object-fit: cover;
+  }
+}
+
+.album-wrapper {
+  display: grid;
+  /* height: 100%; */
+  color: var(--clr-light);
+  flex: auto;
+  /* gap: 2rem; */
+  /* justify-content: space-between; */
+}
+
+#album-folder {
+  background-color: var(--clr-darkest-accent);
+  flex: 1;
+  /* height: 2rem; */
+  /* height: 100%; */
+  font-size: 1.1rem;
+}
+
+.album-folders-header {
+  display: flex;
+  justify-content: left;
+
+  align-items: center;
+  background-color: var(--clr-mid2);
+  /* text-align: baseline; */
+  padding: 1rem;
+  p {
+    color: var(--clr-light);
   }
 }
 
@@ -161,7 +217,7 @@ nav {
   display: grid;
   gap: 0.25rem;
   padding-block: 1rem;
-  flex: 1;
+  /* flex: 1; */
   align-content: center;
 }
 
@@ -173,7 +229,7 @@ nav {
 .table-wrapper {
   overflow-y: scroll;
   flex: 2;
-  border-left: 2rem solid var(--clr-dark-bg);
+  /* border-left: 2rem solid var(--clr-dark-bg); */
   table {
     width: 100%;
   }
@@ -182,6 +238,7 @@ nav {
 .table-track-row {
   display: flex;
   align-items: center;
+  margin-inline: 1rem;
 }
 
 .table-track-row:hover,
@@ -248,49 +305,34 @@ audio::-webkit-media-controls-enclosure {
 /* ----------------------------ABOUT PAGE -----------------------*/
 
 .about--wrapper {
-  display: flex;
-}
-
-.about--content {
   display: grid;
   place-content: start;
   gap: 1rem;
-  flex: 1;
-  padding-inline: 5rem;
+  flex: auto;
+  /* flex: 1; */
+  /* padding-inline: 5rem; */
   color: var(--clr-light);
-  place-content: end;
+  /* place-content: end; */
 }
 
 .envi-img-mayfest {
   flex: 1.25;
-  height: 35rem;
+  height: 25rem;
   border-radius: 0.5rem;
   object-fit: contain;
-}
-
-.links {
-  display: flex;
-  gap: 1rem;
-}
-.music-link {
-  color: var(--clr-light);
-}
-
-.about--span {
-  line-height: 2;
 }
 
 /* ----------------------------MEDIA PAGE -----------------------*/
 
 .media--wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
-  column-gap: 0px;
-  row-gap: 0px;
-  place-items: stretch;
-  width: 100%;
-  justify-content: center;
-  justify-items: center;
+  /* grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr)); */
+  /* overflow-y: scroll; */
+  height: 100dvh;
+  /* width: fit-content; */
+  /* width: 100%; */
+  /* flex: 1; */
+  overflow: hidden;
 
   img,
   video {
@@ -306,17 +348,28 @@ audio::-webkit-media-controls-enclosure {
   }
 }
 
+.media-inner-wrapper {
+  /* height: 100%; */
+  overflow-y: scroll;
+  flex: 1;
+  /* width: 100%; */
+}
+
 /* ----------------------------FOOTER -----------------------*/
 
 footer {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  width: 100vw;
+  padding-block: 2rem;
   color: var(--clr-light);
   pointer-events: none;
   user-select: none;
-  height: 10dvh;
+  flex: 1;
+  flex-flow: column;
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
 }
 
 /* -------------------media query under 1024px - switch to hamburger style nav button and div----- */
@@ -324,6 +377,25 @@ footer {
 @media (max-width: 1024px) {
   .nav-normal {
     display: none;
+  }
+  #FULL-APP {
+    flex-direction: column !important;
+    /* height: fit-content; */
+    overflow-y: scroll;
+    height: 100%;
+    position: relative;
+  }
+  main {
+    /* display: grid; */
+    height: max-content;
+  }
+
+  .nav-wrapper {
+    /* display: none; */
+    flex: auto;
+    display: flex;
+    /* flex-direction: row; */
+    height: 100%;
   }
 
   .mobile-menu-wrapper {
@@ -342,10 +414,8 @@ footer {
   }
   .mobile-logo--nav {
     display: flex;
-    font-size: 4rem;
-    color: var(--clr-lightest);
+    font-size: 2rem;
     font-weight: 400;
-    font-size: calc(2vw + 2vh + 5vmin);
     color: var(--clr-light);
   }
 
@@ -386,6 +456,7 @@ footer {
     box-shadow: none;
     border: none;
     border-radius: 100rem;
+    right: 0;
   }
 
   .mobile-menu-button:hover span {
@@ -403,16 +474,8 @@ footer {
   /* MUSIC PLAYER */
   #audioplayer {
     flex-direction: column;
-    width: 90svw;
-    padding: 1rem;
-    margin: 0 auto;
+    overflow-y: scroll;
     height: 100%;
-    gap: 2rem;
-  }
-
-  .table-wrapper {
-    border-left: none;
-    overflow: hidden;
   }
 
   .audio-player-left img {

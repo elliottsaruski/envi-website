@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, MotionConfig, AnimatePresence } from "framer-motion";
+import Footer from "./Footer";
+import Links from "./Links";
 
 function NavBar() {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
@@ -55,7 +57,7 @@ function NavBar() {
   };
 
   return (
-    <>
+    <div className="nav-wrapper">
       <MotionConfig
         transition={{
           duration: 0.35,
@@ -93,6 +95,9 @@ function NavBar() {
           </motion.button>
           <AnimatePresence>
             <motion.nav
+              onClick={() => {
+                setHamburgerMenuOpen((prev) => !prev);
+              }}
               animate={hamburgerMenuOpen ? "opened" : "close"}
               variants={VAR.nav}
               className={hamburgerMenuOpen ? "nav-mobile-open" : "displayNone"}>
@@ -105,7 +110,7 @@ function NavBar() {
               <Link to="/about">
                 <motion.p variants={VAR.navItem}>ABOUT</motion.p>
               </Link>
-              <Link to="/contact">
+              <Link to="/musicresources">
                 <motion.p variants={VAR.navItem}>MUSIC RESOURCES</motion.p>
               </Link>
             </motion.nav>
@@ -136,7 +141,9 @@ function NavBar() {
           </Link>
         </div>
       </nav>
-    </>
+      <Links />
+      <Footer />
+    </div>
   );
 }
 
