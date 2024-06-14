@@ -2,6 +2,7 @@ import { Tweet } from "react-tweet";
 
 import blenderChallenge from "../data/media/blender-challenge/blender-chal-data";
 import brandingMedia from "../data/media/branding/branding-data.jsx";
+import otherMedia from "../data/media/other-media/other-media-data.jsx";
 
 function MediaPage() {
   const mediaList = brandingMedia.map((media) => {
@@ -19,9 +20,32 @@ function MediaPage() {
         <video
           key={media.id}
           // src={`https://drive.google.com/uc?id=${media.src}/`}
-          alt={media.id}
+          // alt={media.id}
           className="branding-video"
-          controls
+          // controls
+        />
+      );
+    }
+  });
+
+  const otherMediaList = otherMedia.map((media) => {
+    if (media.mediaType === "image") {
+      return (
+        <img
+          key={media.id}
+          src={`https://drive.google.com/thumbnail?id=${media.src}&sz=w1000`}
+          alt={media.id}
+          className="branding-image"
+        />
+      );
+    } else if (media.mediaType === "video") {
+      return (
+        <video
+          key={media.id}
+          // src={`https://drive.google.com/uc?id=${media.src}/`}
+          // alt={media.id}
+          className="branding-video"
+          // controls
         />
       );
     }
@@ -74,7 +98,10 @@ function MediaPage() {
           <h3>Other Work & Experiments</h3>
           <span>other work</span>
         </div>
-        <div className="media-CONTENT">{/* display other work material */}</div>
+        <div className="media-CONTENT">
+          {/* display other work material */}
+          {otherMediaList}
+        </div>
       </div>
     </section>
   );

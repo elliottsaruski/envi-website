@@ -290,14 +290,25 @@ audio::-webkit-media-controls-enclosure {
   place-content: start;
   gap: 1rem;
   flex: auto;
+  width: 80svw;
   color: var(--clr-light);
+  place-items: center;
+
+  span {
+    display: flex;
+    width: 80%;
+    /* margin-inline: 4rem; */
+    /* word-wrap: break-word; */
+    /* max-width: 50%; */
+  }
 }
 
 .envi-img-mayfest {
-  flex: 1.25;
-  height: 25rem;
+  /* flex: 1.25; */
+  height: 35rem;
+  width: auto;
   border-radius: 0.5rem;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* ----------------------------MEDIA PAGE -----------------------*/
