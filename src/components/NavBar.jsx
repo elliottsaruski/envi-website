@@ -113,6 +113,7 @@ function NavBar() {
               <Link to="/musicresources">
                 <motion.p variants={VAR.navItem}>MUSIC RESOURCES</motion.p>
               </Link>
+              <Links />
             </motion.nav>
           </AnimatePresence>
         </motion.div>
@@ -141,7 +142,9 @@ function NavBar() {
           </Link>
         </div>
       </nav>
-      <Links />
+      <div className="navbar-links-only-desktop">
+        <Links />
+      </div>
       <Footer />
     </div>
   );

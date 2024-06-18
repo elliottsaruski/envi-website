@@ -3,11 +3,11 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import HomePage from "./components/HomePage.jsx";
-import MusicPage from "./components/MusicPage.jsx";
-import MediaPage from "./components/MediaPage.jsx";
-import AboutPage from "./components/AboutPage.jsx";
-import MusicResourcesPage from "./components/MusicResourcesPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import MusicPage from "./pages/MusicPage.jsx";
+import MediaPage from "./pages/MediaPage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+import MusicResourcesPage from "./pages/MusicResourcesPage.jsx";
 import Layout from "./components/Layout.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
