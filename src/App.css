@@ -438,6 +438,11 @@ audio::-webkit-media-controls-enclosure {
     height: 15rem;
   }
 } */
+
+/* #return-container {
+  width: 10rem;
+  height: 25rem;
+} */
 .media-CONTENT-other {
   display: flex;
   flex-wrap: wrap;
@@ -453,14 +458,13 @@ audio::-webkit-media-controls-enclosure {
   place-content: start;
   justify-content: space-between;
   gap: 0 1rem;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   .react-tweet-theme {
     background-color: var(--clr-darkest-accent);
     /* flex: auto; */
-    /* grid-area: 1; */
-    /* height: min-content; */
-    width: 25rem;
+    height: min-content;
+    flex: 1;
   }
 }
 

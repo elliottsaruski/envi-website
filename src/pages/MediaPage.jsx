@@ -1,28 +1,64 @@
-import { useRef } from "react";
+import { Suspense, useRef, useEffect } from "react";
 import { Tweet } from "react-tweet";
 
 import blenderChallenge from "../data/media/blender-challenge/blender-chal-data";
 
-// import {
-//   AdvancedVideo,
-//   AdvancedImage,
-//   lazyload,
-//   responsive,
-//   accessibility,
-//   placeholder,
-// } from "@cloudinary/react";
-
-// import { Cloudinary } from "@cloudinary/url-gen";
-// import { scale } from "@cloudinary/url-gen/actions/resize";
+import {
+  AdvancedVideo,
+  AdvancedImage,
+  lazyload,
+  responsive,
+  accessibility,
+  placeholder,
+} from "@cloudinary/react";
 
 function MediaPage() {
   const returnEPRef = useRef();
+  const otherArtRef = useRef();
 
-  // const cld = new Cloudinary({
-  //   cloud: {
-  //     cloudName: "elliott-dev",
-  //   },
-  // });
+  useEffect(() => {
+    if (window && returnEPRef.current) {
+      window.cloudinary
+        .galleryWidget({
+          container: returnEPRef.current,
+          cloudName: "elliott-dev",
+          mediaAssets: [
+            {
+              tag: "return-animation",
+              mediaType: "video",
+            },
+          ],
+          displayProps: {
+            spacing: 15,
+          },
+          height: 200,
+          width: 200,
+          crop: "crop",
+          aspectRatio: "9:16",
+          bgColor: "transparent",
+          carouselLocation: "bottom",
+          carouselOffset: 10,
+          navigation: "always",
+          videoBreakpoint: 25,
+          navigationButtonProps: {
+            shape: "rectangle",
+            iconColor: "#ffffff",
+            color: "#000",
+            size: 52,
+            navigationPosition: "offset",
+            navigationOffset: 12,
+          },
+          themeProps: {
+            primary: "#000000",
+            active: "#777777",
+          },
+          carouselStyle: "indicators",
+        })
+        .render();
+    }
+  });
+
+  // let returnAnimationGallery = cld.video("returnAnimations/return").quality(50);
 
   return (
     <section className="media--wrapper">
@@ -33,9 +69,9 @@ function MediaPage() {
       <div className="media-section">
         <div className="media-title-span">
           <h3>RETURN EP</h3>
-          <span>This EP was released....</span>
         </div>
         <div
+          style={{ width: "25rem", margin: "0 auto" }}
           className="media-CONTENT-promo"
           id="return-container"
           ref={returnEPRef}>
@@ -56,7 +92,7 @@ function MediaPage() {
             <em>SEE</em> my music.
           </span>
         </div>
-        <div className="media-CONTENT-other">
+        <div className="media-CONTENT-other" ref={otherArtRef}>
           {/* display other work material */}
         </div>
       </div>
@@ -77,12 +113,14 @@ function MediaPage() {
             world, hence the posting on Twitter/X.
           </span>
         </div>
-        <div className="media-CONTENT-tweets">
-          {/* display 31 Day Blender 3D Challenge material */}
-          {blenderChallenge.map((tweet) => {
-            return <Tweet key={tweet.id} id={tweet.src} />;
-          })}
-        </div>
+        <Suspense fallback={<p>loading</p>}>
+          <div className="media-CONTENT-tweets">
+            {/* display 31 Day Blender 3D Challenge material */}
+            {blenderChallenge.map((tweet) => {
+              return <Tweet key={tweet.id} id={tweet.src} />;
+            })}
+          </div>
+        </Suspense>
       </div>
     </section>
   );
