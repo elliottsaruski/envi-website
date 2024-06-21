@@ -53,13 +53,17 @@ main {
 }
 
 .layout-div section {
-  padding: 5rem;
+  padding: 2rem 5rem;
 }
 
 .layout-div {
   h2 {
+    display: flex;
     font-size: 300%;
-    font-weight: 400;
+    font-weight: 600;
+    letter-spacing: 1ch;
+    color: var(--clr-mid);
+    text-transform: uppercase;
   }
 
   h3 {
@@ -93,7 +97,7 @@ main {
   display: grid;
   list-style: none;
   color: var(--clr-light);
-  align-items: baseline;
+  align-items: center;
   align-content: start;
   user-select: none;
   position: relative;
@@ -103,9 +107,6 @@ main {
   padding-inline: 1rem;
   gap: 2rem;
 }
-
-/* nav {
-} */
 
 .navItem p:hover,
 .navItem p:focus-visible {
@@ -169,17 +170,16 @@ main {
 #audioplayer {
   display: flex;
   height: 100svh;
-  width: 80svw;
+  width: 80dvw;
+  margin: 0;
+  padding: 0;
 }
 
 .audio-player-left {
   display: flex;
   flex-direction: column;
   align-content: start;
-  /* flex: 1.25; */
-  /* flex-shrink: 1; */
-  /* flex-grow: 1; */
-  border: 0.15rem groove rgba(0, 0, 0, 0.665);
+  /* border: 0.15rem groove rgba(0, 0, 0, 0.665); */
 
   img {
     height: 50%;
@@ -201,7 +201,7 @@ main {
   flex: 1;
   font-size: 1.3rem;
   height: 100%;
-  border-bottom: 0.15rem groove rgba(0, 0, 0, 0.665);
+  /* border-bottom: 0.15rem groove rgba(0, 0, 0, 0.665); */
   transition: height 4s;
 }
 
@@ -221,7 +221,6 @@ main {
 
 .album-folders-header {
   display: flex;
-  /* justify-content: left; */
   align-items: center;
   background-color: var(--clr-dark-bg);
 
@@ -264,7 +263,7 @@ main {
 .table-wrapper {
   overflow-y: scroll;
   flex: 2;
-  border: 0.15rem groove rgba(0, 0, 0, 0.665);
+  /* border: 0.15rem groove rgba(0, 0, 0, 0.665); */
 
   table {
     width: 100%;
@@ -343,50 +342,35 @@ audio::-webkit-media-controls-enclosure {
 
 .about--wrapper {
   display: flex;
-  place-content: start;
+  flex-direction: column;
   height: 100%;
   width: 80svw;
   color: var(--clr-light);
-  justify-content: center;
   flex-wrap: wrap;
   gap: 3rem;
+  overflow: hidden;
   overflow-y: scroll;
 
   img {
-    height: 35rem;
+    height: 20rem;
   }
   span {
     display: flex;
-    width: 35rem;
+    width: 40rem;
   }
-}
-
-.about-content {
-  display: grid;
-  place-content: start;
-  gap: 2rem;
 }
 
 /* ----------------------------RESOURCES PAGE -----------------------*/
 
 .music-resources--wrapper {
   display: grid;
-  text-align: center;
-  place-content: start;
-  justify-content: center;
-  gap: 5rem;
-  width: 80svw;
-  height: 100%;
-  overflow-y: scroll;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* margin: 0 auto; */
-  h3 {
-    font-size: 300%;
-  }
+
   div {
     display: grid;
-    gap: 2rem;
+    padding: 1rem;
+  }
+  img {
+    height: 25rem;
   }
 }
 
@@ -397,7 +381,6 @@ audio::-webkit-media-controls-enclosure {
   overflow-y: scroll;
   width: 80svw;
   gap: 2rem;
-  /* line-height: 2; */
 
   h3 {
     font-size: 300%;
@@ -405,13 +388,11 @@ audio::-webkit-media-controls-enclosure {
 }
 
 .media-title-span {
-  display: flex;
-  /* max-width: 50%; */
+  display: grid;
+
   line-height: 1.7;
-  /* margin-left: 5rem; */
   margin-bottom: 2rem;
   gap: 1rem;
-  flex-wrap: wrap;
   h3 {
     line-height: 1;
     flex: 1;
@@ -424,25 +405,6 @@ audio::-webkit-media-controls-enclosure {
   }
 }
 
-/* .media-CONTENT-promo {
-  display: flex;
-  flex-wrap: wrap;
-  place-content: start;
-  justify-content: center;
-  gap: 0 1rem;
-
-  .branding-image {
-    height: 25rem;
-  }
-  .branding-video {
-    height: 15rem;
-  }
-} */
-
-/* #return-container {
-  width: 10rem;
-  height: 25rem;
-} */
 .media-CONTENT-other {
   display: flex;
   flex-wrap: wrap;
@@ -456,15 +418,13 @@ audio::-webkit-media-controls-enclosure {
   display: flex;
   flex-wrap: wrap;
   place-content: start;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 0 1rem;
-  /* overflow: hidden; */
 
   .react-tweet-theme {
     background-color: var(--clr-darkest-accent);
-    /* flex: auto; */
-    height: min-content;
-    flex: 1;
+    width: 100%;
+    /* flex: 0.25; */
   }
 }
 
@@ -472,7 +432,6 @@ audio::-webkit-media-controls-enclosure {
 
 footer {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   padding-block: 2rem;
   color: var(--clr-light);
@@ -492,7 +451,6 @@ footer {
     display: none;
   }
   #FULL_APP {
-    /* display: flex !important; */
     flex-direction: column;
     height: 100%;
     overflow: hidden;
@@ -525,13 +483,12 @@ footer {
     font-size: 2rem;
     font-weight: 400;
     color: var(--clr-light);
-    /* padding-block: 5rem; */
   }
 
   .nav-mobile-open {
     position: fixed;
     background: rgba(0, 0, 0, 0.665);
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     height: 100dvh;
     width: 100%;
     top: 0%;
@@ -542,6 +499,8 @@ footer {
     flex-direction: column;
     z-index: 10;
     backdrop-filter: blur(25px);
+    padding: 1rem;
+    place-content: center;
   }
 
   .nav-mobile-open p {
@@ -558,14 +517,13 @@ footer {
   .mobile-menu-button {
     position: absolute;
     width: 4.5rem;
-    right: 2rem;
     aspect-ratio: 1;
     background: transparent;
     z-index: 1000;
     box-shadow: none;
     border: none;
     border-radius: 100rem;
-    right: 0;
+    right: 1rem;
   }
 
   .mobile-menu-button:hover span {
@@ -583,7 +541,6 @@ footer {
   /* MUSIC PLAYER */
   #audioplayer {
     flex-direction: column;
-    /* overflow-y: scroll; */
     height: 100%;
     width: 100%;
     padding: 2rem;
@@ -602,20 +559,19 @@ footer {
   }
   /* -------------LAYOUT DIV MOBILE --- FOR EACH SECTION ---------------*/
   .layout-div {
-    justify-content: center;
-    /* padding: 1rem; */
-    /* padding-block: 2rem; */
-    margin: 0;
-    /* width: fit-content; */
     section {
       padding: 0rem;
       width: 100svw;
       overflow: hidden;
+      padding-block: 1rem;
     }
     h2 {
+      display: flex;
       font-size: 300%;
       font-weight: 400;
-      text-align: center;
+      letter-spacing: 0.25ch;
+      color: var(--clr-mid);
+      padding-left: 1rem;
     }
 
     h3 {
@@ -626,14 +582,22 @@ footer {
   /* -------------------------------------------------------- */
 
   .about--wrapper {
-    width: 100%;
-    overflow: hidden;
-    margin: 2rem;
+    display: grid;
+    width: 95dvw;
+    margin: 0;
+    gap: 1rem;
+
     span {
-      width: auto;
-      max-width: 35rem;
-      word-wrap: break-word;
+      width: 85%;
     }
+    img {
+      width: 100%;
+    }
+  }
+  .about-content {
+    display: grid;
+    padding: 1rem !important;
+    gap: 1rem;
   }
 
   .media--wrapper {
@@ -645,14 +609,11 @@ footer {
     padding-block: 2rem;
   }
 
-  /* .media-section {
-    width: 100%;
-  } */
-
   .media-title-span {
     max-width: 90%;
     line-height: 1.7;
     margin: 0 auto;
+    display: grid;
   }
 
   .media-CONTENT {
@@ -663,11 +624,22 @@ footer {
 
   .media-CONTENT-tweets {
     justify-content: center;
+    width: 100dvw;
+    padding: 2rem;
+    .react-tweet-theme {
+      background-color: var(--clr-darkest-accent);
+      width: 15dvw;
+      flex: 1;
+    }
+  }
+
+  #audioplayer {
+    margin: 0;
+    padding: 0;
   }
 
   .table-wrapper {
     overflow: hidden;
-    /* width: 100svw; */
 
     td {
       width: max-content;
@@ -686,6 +658,8 @@ footer {
     display: none;
   }
 }
+
+/*------------------------------------------- HELPER CLASSES */
 
 .displayNone {
   display: none;
