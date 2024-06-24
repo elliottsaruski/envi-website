@@ -42,6 +42,10 @@ function ReturnEP() {
     <div className="media-section">
       <div className="media-title-span">
         <h3>RETURN EP</h3>
+        <span>
+          My latest release, RETURN, features 6 animations made in Blender 3D
+          and composited in Davinci Resolve.
+        </span>
       </div>
       <div
         style={{ width: "25rem", margin: "0 auto" }}

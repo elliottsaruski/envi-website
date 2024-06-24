@@ -52,7 +52,6 @@ import ht15 from "../assets/music/heds/HT15-envi.wav";
 //------------------------ARRAY
 const myTracks = [
   {
-    id: 1,
     key: "RETURN",
     title: "RETURN",
     album: "RETURN",
@@ -67,7 +66,6 @@ const myTracks = [
     },
   },
   {
-    id: 2,
     key: "SERENITY",
     title: "SERENITY",
     album: "RETURN",
@@ -83,7 +81,6 @@ const myTracks = [
     },
   },
   {
-    id: 3,
     key: "TREATMERIGHT",
     title: "TREATMERIGHT",
     album: "RETURN",
@@ -99,7 +96,6 @@ const myTracks = [
     },
   },
   {
-    id: 4,
     key: "DWISEEU ",
     title: "DW, I SEE U (feat. Justin Scott)",
     album: "RETURN",
@@ -115,7 +111,6 @@ const myTracks = [
     },
   },
   {
-    id: 5,
     key: "UNDERWATER ",
     title: "UNDERWATER",
     album: "RETURN",
@@ -131,7 +126,6 @@ const myTracks = [
     },
   },
   {
-    id: 6,
     key: "EXPECTATIONS ",
     title: "EXPECTATIONS",
     album: "RETURN",
@@ -146,9 +140,163 @@ const myTracks = [
         "https://music.apple.com/us/album/expectations/1647497906?i=1647497919",
     },
   },
+  //   --------------------HEDS TAPES --------------------
+  {
+    key: "HT2",
+    title: "heds tape 2 (sub)",
+    album: "Heds Tapes",
+    artwork: genericHedsCover,
+    src: ht2,
+    links: {
+      soundcloud: null,
+    },
+  },
+  {
+    key: "HT3",
+    title: "heds tape 3 (submission)",
+    album: "Heds Tapes",
+    artwork: ht3Cover,
+    src: ht3,
+    links: {
+      soundcloud:
+        "https://soundcloud.com/envimusic/ht3-envi-sub?in=envimusic/sets/heds-tape-subs",
+    },
+  },
+  {
+    key: "HT4",
+    title: "heds tape 4 (submission)",
+    album: "Heds Tapes",
+    artwork: ht4Cover,
+    src: ht4,
+    links: {
+      soundcloud:
+        "https://soundcloud.com/envimusic/ht4-envi-sub?in=envimusic/sets/heds-tape-subs",
+    },
+  },
+  {
+    key: "HT5",
+    title: "heds tape 5 (submission)",
+    album: "Heds Tapes",
+    artwork: ht5Cover,
+    src: ht5,
+    links: {
+      soundcloud:
+        "https://soundcloud.com/envimusic/ht5-envi-sub?in=envimusic/sets/heds-tape-subs",
+    },
+  },
+  {
+    key: "HT6",
+    title: "heds tape 6 (on tape)",
+    album: "Heds Tapes",
+    artwork: ht6Cover,
+    src: ht6,
+    links: {
+      soundcloud:
+        "https://soundcloud.com/envimusic/ht6-envi-on-tape?in=envimusic/sets/heds-tape-subs",
+      tapeLink: "",
+    },
+  },
+  {
+    key: "HT7",
+    title: "heds tape 7 (submission)",
+    album: "Heds Tapes",
+    artwork: ht7Cover,
+    src: ht7,
+    links: {
+      soundcloud:
+        "https://soundcloud.com/envimusic/ht7-envi-sub?in=envimusic/sets/heds-tape-subs",
+    },
+  },
+  {
+    key: "HT8",
+    title: "heds tape 8 (submission)",
+    album: "Heds Tapes",
+    artwork: ht8Cover,
+    src: ht8,
+    links: {
+      soundcloud:
+        "https://soundcloud.com/envimusic/ht8-envi-sub?in=envimusic/sets/heds-tape-subs",
+    },
+  },
+  {
+    key: "HT9",
+    title: "heds tape 9 (on tape)",
+    album: "Heds Tapes",
+    artwork: ht9Cover,
+    src: ht9,
+    links: {
+      soundcloud:
+        "https://soundcloud.com/envimusic/ht9-envi-on-tape?in=envimusic/sets/heds-tape-subs",
+    },
+  },
+  {
+    key: "HT10",
+    title: "heds tape 10 (on tape)",
+    album: "Heds Tapes",
+    artwork: ht10Cover,
+    src: ht10,
+    links: {
+      soundcloud:
+        "https://soundcloud.com/envimusic/ht10-envi-on-tape?in=envimusic/sets/heds-tape-subs",
+    },
+  },
+  {
+    key: "HT11",
+    title: "heds tape 11 (on tape)",
+    album: "Heds Tapes",
+    artwork: ht11Cover,
+    src: ht11,
+    links: {
+      soundcloud:
+        "https://soundcloud.com/envimusic/ht11-envi-on-tape?in=envimusic/sets/heds-tape-subs",
+    },
+  },
+  {
+    key: "HT12",
+    title: "heds tape 12 (submission)",
+    album: "Heds Tapes",
+    artwork: ht12Cover,
+    src: ht12,
+    links: {
+      soundcloud:
+        "https://soundcloud.com/envimusic/ht12-envi-sub?in=envimusic/sets/heds-tape-subs",
+    },
+  },
+  {
+    key: "HT13",
+    title: "heds tape 13 (on tape)",
+    album: "Heds Tapes",
+    artwork: genericHedsCover,
+    src: ht13,
+    links: {
+      soundcloud:
+        "https://soundcloud.com/envimusic/ht13-envi-on-tape?in=envimusic/sets/heds-tape-subs",
+    },
+  },
+  {
+    key: "HT14",
+    title: "heds tape 14 (on tape)",
+    album: "Heds Tapes",
+    artwork: ht14Cover,
+    src: ht14,
+    links: {
+      soundcloud:
+        "https://soundcloud.com/envimusic/ht14-envi-on-tape?in=envimusic/sets/heds-tape-subs",
+    },
+  },
+  {
+    key: "HT15",
+    title: "heds tape 15 (submission)",
+    album: "Heds Tapes",
+    artwork: ht15Cover,
+    src: ht15,
+    links: {
+      soundcloud:
+        "https://soundcloud.com/envimusic/ht15-envi-sub?in=envimusic/sets/heds-tape-subs",
+    },
+  },
   //---------------------------------GHOST LOVE----------------
   {
-    id: 7,
     key: "GHOSTLOVE ",
     title: "Ghost Love w/ sleepless & lorn",
     album: "Ghost Love",
@@ -163,7 +311,6 @@ const myTracks = [
   },
   //---------------------------------PREVIOUS RELEASES----------------
   {
-    id: 8,
     key: "HOME",
     title: "home (youth)",
     artwork: previousReleasesCover,
@@ -178,7 +325,6 @@ const myTracks = [
     },
   },
   {
-    id: 9,
     key: "TRAPPED",
     title: "Trapped",
     artwork: previousReleasesCover,
@@ -192,7 +338,6 @@ const myTracks = [
     },
   },
   {
-    id: 10,
     key: "FORGETFUL",
     title: "Forgetful",
     artwork: previousReleasesCover,
@@ -207,7 +352,6 @@ const myTracks = [
     },
   },
   {
-    id: 11,
     key: "URANG",
     title: "u rang?",
     artwork: previousReleasesCover,
@@ -221,7 +365,6 @@ const myTracks = [
     },
   },
   {
-    id: 12,
     key: "SWANGSET",
     title: "swangset",
     artwork: previousReleasesCover,
@@ -236,7 +379,6 @@ const myTracks = [
     },
   },
   {
-    id: 13,
     key: "ABSTRACTTHOUGHTS",
     title: "Abstract Thoughts",
     artwork: previousReleasesCover,
@@ -251,7 +393,6 @@ const myTracks = [
     },
   },
   {
-    id: 14,
     key: "COALESCENCE",
     title: "Coalescence",
     artwork: previousReleasesCover,
@@ -263,176 +404,6 @@ const myTracks = [
         "https://open.spotify.com/track/1CEWkBVgBUz5865DOcfE0i?si=e59791b84c2e47ac",
       apple:
         "https://music.apple.com/us/album/coalescence/1456211474?i=1456211485",
-    },
-  },
-
-  //   --------------------HEDS TAPES --------------------
-  {
-    id: 15,
-    key: "HT2",
-    title: "heds tape 2 (sub)",
-    album: "Heds Tapes",
-    artwork: genericHedsCover,
-    src: ht2,
-    links: {
-      soundcloud: null,
-    },
-  },
-  {
-    id: 16,
-    key: "HT3",
-    title: "heds tape 3 (submission)",
-    album: "Heds Tapes",
-    artwork: ht3Cover,
-    src: ht3,
-    links: {
-      soundcloud:
-        "https://soundcloud.com/envimusic/ht3-envi-sub?in=envimusic/sets/heds-tape-subs",
-    },
-  },
-  {
-    id: 17,
-    key: "HT4",
-    title: "heds tape 4 (submission)",
-    album: "Heds Tapes",
-    artwork: ht4Cover,
-    src: ht4,
-    links: {
-      soundcloud:
-        "https://soundcloud.com/envimusic/ht4-envi-sub?in=envimusic/sets/heds-tape-subs",
-    },
-  },
-  {
-    id: 18,
-    key: "HT5",
-    title: "heds tape 5 (submission)",
-    album: "Heds Tapes",
-    artwork: ht5Cover,
-    src: ht5,
-    links: {
-      soundcloud:
-        "https://soundcloud.com/envimusic/ht5-envi-sub?in=envimusic/sets/heds-tape-subs",
-    },
-  },
-  {
-    id: 19,
-    key: "HT6",
-    title: "heds tape 6 (on tape)",
-    album: "Heds Tapes",
-    artwork: ht6Cover,
-    src: ht6,
-    links: {
-      soundcloud:
-        "https://soundcloud.com/envimusic/ht6-envi-on-tape?in=envimusic/sets/heds-tape-subs",
-      tapeLink: "",
-    },
-  },
-  {
-    id: 20,
-    key: "HT7",
-    title: "heds tape 7 (submission)",
-    album: "Heds Tapes",
-    artwork: ht7Cover,
-    src: ht7,
-    links: {
-      soundcloud:
-        "https://soundcloud.com/envimusic/ht7-envi-sub?in=envimusic/sets/heds-tape-subs",
-    },
-  },
-  {
-    id: 21,
-    key: "HT8",
-    title: "heds tape 8 (submission)",
-    album: "Heds Tapes",
-    artwork: ht8Cover,
-    src: ht8,
-    links: {
-      soundcloud:
-        "https://soundcloud.com/envimusic/ht8-envi-sub?in=envimusic/sets/heds-tape-subs",
-    },
-  },
-  {
-    id: 22,
-    key: "HT9",
-    title: "heds tape 9 (on tape)",
-    album: "Heds Tapes",
-    artwork: ht9Cover,
-    src: ht9,
-    links: {
-      soundcloud:
-        "https://soundcloud.com/envimusic/ht9-envi-on-tape?in=envimusic/sets/heds-tape-subs",
-    },
-  },
-  {
-    id: 23,
-    key: "HT10",
-    title: "heds tape 10 (on tape)",
-    album: "Heds Tapes",
-    artwork: ht10Cover,
-    src: ht10,
-    links: {
-      soundcloud:
-        "https://soundcloud.com/envimusic/ht10-envi-on-tape?in=envimusic/sets/heds-tape-subs",
-    },
-  },
-  {
-    id: 24,
-    key: "HT11",
-    title: "heds tape 11 (on tape)",
-    album: "Heds Tapes",
-    artwork: ht11Cover,
-    src: ht11,
-    links: {
-      soundcloud:
-        "https://soundcloud.com/envimusic/ht11-envi-on-tape?in=envimusic/sets/heds-tape-subs",
-    },
-  },
-  {
-    id: 25,
-    key: "HT12",
-    title: "heds tape 12 (submission)",
-    album: "Heds Tapes",
-    artwork: ht12Cover,
-    src: ht12,
-    links: {
-      soundcloud:
-        "https://soundcloud.com/envimusic/ht12-envi-sub?in=envimusic/sets/heds-tape-subs",
-    },
-  },
-  {
-    id: 26,
-    key: "HT13",
-    title: "heds tape 13 (on tape)",
-    album: "Heds Tapes",
-    artwork: genericHedsCover,
-    src: ht13,
-    links: {
-      soundcloud:
-        "https://soundcloud.com/envimusic/ht13-envi-on-tape?in=envimusic/sets/heds-tape-subs",
-    },
-  },
-  {
-    id: 27,
-    key: "HT14",
-    title: "heds tape 14 (on tape)",
-    album: "Heds Tapes",
-    artwork: ht14Cover,
-    src: ht14,
-    links: {
-      soundcloud:
-        "https://soundcloud.com/envimusic/ht14-envi-on-tape?in=envimusic/sets/heds-tape-subs",
-    },
-  },
-  {
-    id: 28,
-    key: "HT15",
-    title: "heds tape 15 (submission)",
-    album: "Heds Tapes",
-    artwork: ht15Cover,
-    src: ht15,
-    links: {
-      soundcloud:
-        "https://soundcloud.com/envimusic/ht15-envi-sub?in=envimusic/sets/heds-tape-subs",
     },
   },
 ];
