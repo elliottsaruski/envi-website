@@ -1,9 +1,3 @@
-
 export default function Footer() {
-
-  return (
-    <footer>
-      Created by ENVI (2024). All Rights Reserved
-    </footer>
-  );
+  return <footer>Website created by ENVI All Rights Reserved (2024)</footer>;
 }

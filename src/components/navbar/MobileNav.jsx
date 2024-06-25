@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, MotionConfig, AnimatePresence } from "framer-motion";
+import { motion, MotionConfig } from "framer-motion";
 import { Link } from "react-router-dom";
 import Links from "../Links.jsx";
 import Footer from "../Footer.jsx";
@@ -64,9 +64,29 @@ function MobileNav() {
       }}>
       <motion.div className="mobile-menu-wrapper">
         {/* --------------------------------------Nav hamburger---------------------------------- */}
-        <Link to="/" className="mobile-logo--nav">
-          <h1>ENVI</h1>
-        </Link>
+
+        {/* <AnimatePresence> */}
+        <motion.nav
+          onClick={() => {
+            setHamburgerMenuOpen((prev) => !prev);
+          }}
+          animate={hamburgerMenuOpen ? "opened" : "close"}
+          variants={VAR.nav}
+          className={hamburgerMenuOpen ? "nav-mobile-open" : "displayNone"}>
+          <Link to="/music">
+            <motion.p variants={VAR.navItem}>MUSIC</motion.p>
+          </Link>
+          <Link to="/media">
+            <motion.p variants={VAR.navItem}>MEDIA</motion.p>
+          </Link>
+          <Link to="/about">
+            <motion.p variants={VAR.navItem}>ABOUT</motion.p>
+          </Link>
+          <Link to="/musicresources">
+            <motion.p variants={VAR.navItem}>RESOURCES</motion.p>
+          </Link>
+          <Links />
+        </motion.nav>
         <motion.button
           initial={false}
           className="mobile-menu-button"
@@ -92,29 +112,7 @@ function MobileNav() {
             variants={VAR.bottom}
             className="ham-bottom"></motion.span>
         </motion.button>
-        <AnimatePresence>
-          <motion.nav
-            onClick={() => {
-              setHamburgerMenuOpen((prev) => !prev);
-            }}
-            animate={hamburgerMenuOpen ? "opened" : "close"}
-            variants={VAR.nav}
-            className={hamburgerMenuOpen ? "nav-mobile-open" : "displayNone"}>
-            <Link to="/music">
-              <motion.p variants={VAR.navItem}>MUSIC</motion.p>
-            </Link>
-            <Link to="/media">
-              <motion.p variants={VAR.navItem}>MEDIA</motion.p>
-            </Link>
-            <Link to="/about">
-              <motion.p variants={VAR.navItem}>ABOUT</motion.p>
-            </Link>
-            <Link to="/musicresources">
-              <motion.p variants={VAR.navItem}>MUSIC RESOURCES</motion.p>
-            </Link>
-            <Links />
-          </motion.nav>
-        </AnimatePresence>
+        {/* </AnimatePresence> */}
         <Footer />
       </motion.div>
     </MotionConfig>

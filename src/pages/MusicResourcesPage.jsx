@@ -9,19 +9,23 @@ function MusicResourcesPage() {
   });
 
   const img = cld.image("resources/vitalpresets");
+
   return (
     <section className="music-resources--wrapper">
       <h2>Music Resources</h2>
       <div>
-        <h3>Presets</h3>
+        <div className="presets-wrapper">
+          <h3>Presets</h3>
+          <span>Sounds created for musicians for popular VST instruments.</span>
+        </div>
         <a
           href="https://envimusic.gumroad.com/l/vitalpresetsbyenvi"
           target="_blank">
           <AdvancedImage cldImg={img} />
-          <figcaption>Vital Presets by envi - FREE</figcaption>
+          {/* <figcaption>Vital Presets by envi - FREE</figcaption> */}
         </a>
       </div>
-      <div>
+      <div className="presets-wrapper">
         <h3>Sample Packs</h3>
         <p>coming soon...</p>
       </div>

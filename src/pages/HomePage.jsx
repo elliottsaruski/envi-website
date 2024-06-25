@@ -1,10 +1,8 @@
-import { NavLink } from "react-router-dom";
-
 function HomePage() {
   return (
-    <div className="home-wrapper">
-      <p>ENVI</p>
-      <NavLink to="/music">enter</NavLink>
+    <div>
+      <h3>Hi! I{"'"}m envi!</h3>
+      <p>welcome to my site!</p>
     </div>
   );
 }

@@ -35,7 +35,7 @@ function AboutPage() {
           <br />
           <span className="about--span">
             Fast forward a year or two, and the null project transforms into{" "}
-            {""}
+            {"'envi'"}.
           </span>
         </div>
       </div>

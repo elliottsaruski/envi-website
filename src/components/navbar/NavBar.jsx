@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Footer from "../Footer.jsx";
 import Links from "../Links.jsx";
 import MobileNav from "./MobileNav.jsx";
@@ -10,28 +10,26 @@ function NavBar() {
       <MobileNav />
 
       {/* --------------------------------------Normal Nav---------------------------------- */}
+      <NavLink to="/home">
+        <h1 className="logo--nav">ENVI</h1>
+      </NavLink>
+      <hr />
+
       <nav className="nav-normal">
-        <Link to="/" className="logo--nav">
-          <h1>ENVI</h1>
-        </Link>
-        <div className="nav-items-right">
-          <Link to="/music" id="music-nav-tab" className="music--nav navItem">
-            <p>MUSIC</p>
-          </Link>
-          <Link to="/media" id="media-nav-tab" className="media--nav navItem">
-            <p>MEDIA</p>
-          </Link>
-          <Link to="/about" id="about-nav-tab" className="about--nav navItem">
-            <p>ABOUT</p>
-          </Link>
-          <Link
-            to="/musicresources"
-            id="music-resources-nav-tab"
-            className="media--nav navItem">
-            <p>MUSIC RESOURCES</p>
-          </Link>
-        </div>
+        <NavLink to="/music" className="navItem">
+          MUSIC
+        </NavLink>
+        <NavLink to="/media" className="navItem">
+          MEDIA
+        </NavLink>
+        <NavLink to="/about" className="navItem">
+          ABOUT
+        </NavLink>
+        <NavLink to="/musicresources" className="navItem">
+          RESOURCES
+        </NavLink>
       </nav>
+      <hr />
       <div className="navbar-links-only-desktop">
         <Links />
       </div>
