@@ -2,13 +2,14 @@ import { useState, useRef } from "react";
 import myTracks from "../../data/MusicData.jsx";
 
 import artworkThumbnailPlaceholder from "../../assets/music/artworks/previousReleasesCover.jpg";
+import AlbumFilter from "./AlbumFilter.jsx";
 function AudioPlayer() {
   const [artworkThumbnail, setArtworkThumbnail] = useState(
     artworkThumbnailPlaceholder
   );
   const [audioSrc, setAudioSrc] = useState();
   const [songTitle, setSongTitle] = useState("Select a Track!");
-  const [albumTitle, setAlbumTitle] = useState("album");
+  const [albumTitle, setAlbumTitle] = useState("-");
   const [filter, setFilter] = useState("SHOW ALL");
   const albums = ["RETURN", "Previous Releases", "Ghost Love", "Heds Tapes"];
   const audioRef = useRef();
@@ -16,28 +17,9 @@ function AudioPlayer() {
   return (
     <>
       <div className="audio-player-left">
-        <div className="album-wrapper">
-          <div className="album-folders-header">
-            <p>filter by album</p>
-          </div>
-          {/* filter bar */}
-          <div className="album-folders">
-            {albums.map((album) => {
-              return (
-                <div
-                  id="album-folder"
-                  key={album}
-                  onClick={() => setFilter(album)}>
-                  {/* -------- ALBUM TEXT FOR FOLDER ----------- */}
-                  {album}
-                </div>
-              );
-            })}
-            <p onClick={() => setFilter("SHOW ALL")} id="show-all">
-              SHOW ALL
-            </p>
-          </div>
-        </div>
+        <h2>music</h2>
+
+        <AlbumFilter setFilter={setFilter} albums={albums} />
         <div className="artwork-now-playing-wrapper">
           <img src={artworkThumbnail} alt="song artwork" />
           <div id="now-playing-details">

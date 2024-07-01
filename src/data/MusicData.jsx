@@ -153,7 +153,7 @@ const myTracks = [
   },
   {
     key: "HT3",
-    title: "heds tape 3 (submission)",
+    title: "heds tape 3 (sub)",
     album: "Heds Tapes",
     artwork: ht3Cover,
     src: ht3,
@@ -164,7 +164,7 @@ const myTracks = [
   },
   {
     key: "HT4",
-    title: "heds tape 4 (submission)",
+    title: "heds tape 4 (sub)",
     album: "Heds Tapes",
     artwork: ht4Cover,
     src: ht4,
@@ -175,7 +175,7 @@ const myTracks = [
   },
   {
     key: "HT5",
-    title: "heds tape 5 (submission)",
+    title: "heds tape 5 (sub)",
     album: "Heds Tapes",
     artwork: ht5Cover,
     src: ht5,
@@ -198,7 +198,7 @@ const myTracks = [
   },
   {
     key: "HT7",
-    title: "heds tape 7 (submission)",
+    title: "heds tape 7 (sub)",
     album: "Heds Tapes",
     artwork: ht7Cover,
     src: ht7,
@@ -209,7 +209,7 @@ const myTracks = [
   },
   {
     key: "HT8",
-    title: "heds tape 8 (submission)",
+    title: "heds tape 8 (sub)",
     album: "Heds Tapes",
     artwork: ht8Cover,
     src: ht8,
@@ -253,7 +253,7 @@ const myTracks = [
   },
   {
     key: "HT12",
-    title: "heds tape 12 (submission)",
+    title: "heds tape 12 (sub)",
     album: "Heds Tapes",
     artwork: ht12Cover,
     src: ht12,
@@ -286,7 +286,7 @@ const myTracks = [
   },
   {
     key: "HT15",
-    title: "heds tape 15 (submission)",
+    title: "heds tape 15 (sub)",
     album: "Heds Tapes",
     artwork: ht15Cover,
     src: ht15,
