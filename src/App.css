@@ -13,6 +13,21 @@
   --clr-mid2: var(--myrtle-green);
   --clr-light: var(--platinum);
   --clr-lightest: var(--antiflash-white);
+
+  /* --------------- FONT SIZE -------- */
+  --fs-smallest: 0.85rem;
+  --fs-sm: 1.1rem;
+  --fs-md: 1.25rem;
+  --fs-lg: 1.5rem;
+  --fs-sm-heading: 2rem;
+  --fs-md-heading: 4rem;
+  --fs-lg-heading: 7rem;
+
+  /* ----------- PADDING ------------ */
+  --pd-sm: 0.5rem;
+  --pd-md: 1rem;
+  --pd-lg: 2rem;
+  --pd-xl: 5rem;
 }
 
 *,
@@ -49,7 +64,7 @@ p {
 }
 
 .layout-div section {
-  padding: 2rem 5rem;
+  padding: var(--pd-lg) var(--pd-lg);
   width: 85dvw;
 }
 
@@ -58,14 +73,21 @@ p {
 
   h2 {
     display: flex;
-    font-size: 300%;
-    font-weight: 600;
+    z-index: -1;
+    right: 2rem;
+    word-spacing: 1rem;
+    letter-spacing: -0.5rem;
+    font-size: var(--fs-lg-heading);
+    font-weight: 900;
     color: var(--clr-mid);
     text-transform: uppercase;
+    width: auto;
+    text-shadow: 0.25rem 0.25rem 0.1rem var(--clr-light);
+    line-height: 1;
   }
 
   h3 {
-    font-size: 200%;
+    font-size: var(--fs-sm-heading);
     font-weight: 200;
   }
 }
@@ -98,11 +120,7 @@ hr {
 nav {
   display: flex;
   flex-direction: column;
-  padding: 0;
-  margin: 0;
-  /* background-color: var(--clr-darkest-accent); */
-  /* padding: .25rem 0; */
-  /* padding-block: 2rem; */
+  opacity: 95%;
 }
 .nav-wrapper {
   display: flex;
@@ -111,12 +129,11 @@ nav {
   color: var(--clr-light);
   user-select: none;
   position: relative;
-  height: 100dvh;
+  height: 100svh;
   background-color: var(--clr-darkest-accent);
-  font-size: 120%;
-  padding: 1rem;
+  font-size: var(--fs-md);
+  padding: var(--pd-md);
   width: 15dvw;
-  /* flex: 1; */
 }
 
 .navItem p:hover,
@@ -126,7 +143,7 @@ nav {
 
 .logo--nav {
   display: flex;
-  font-size: 4rem;
+  font-size: var(--fs-md-heading);
   color: var(--clr-light);
   width: min-content;
   line-height: 1;
@@ -137,24 +154,13 @@ nav {
   color: var(--clr-mid);
   text-decoration: underline;
   text-underline-offset: 0.25rem;
-  /* list-style: circle; */
 }
 
 .nav-wrapper a.active h1 {
   color: var(--clr-mid);
 }
 
-.nav-items-right {
-  display: grid;
-  font-size: 1.2rem;
-  margin-top: 2rem;
-  padding-left: 0.25rem;
-}
-
 .navItem {
-  display: flex;
-  /* flex: auto; */
-  /* justify-content: start; */
   color: var(--clr-light);
 }
 
@@ -168,23 +174,27 @@ nav {
 
 .links {
   display: flex;
-  flex-direction: column-reverse;
-  gap: 1rem;
-  /* justify-content: stretch; */
-  div {
-    display: flex;
-    gap: 1rem;
-    :hover {
-      color: var(--clr-mid);
-    }
-  }
+  gap: 0.25rem;
+  place-items: end;
+  justify-content: space-between;
+
   svg {
     object-fit: cover;
-    height: 2rem;
-    width: 2rem;
+    height: 1.75rem;
+    width: 1.75rem;
     color: var(--clr-light);
     opacity: 85%;
   }
+
+  svg:hover {
+    color: var(--clr-mid);
+  }
+}
+
+.navbar-links-only-desktop {
+  flex: 1;
+  height: 100%;
+  place-content: end;
 }
 
 /* ----------------------------FOOTER -----------------------*/
@@ -195,12 +205,11 @@ footer {
   color: var(--clr-light);
   pointer-events: none;
   user-select: none;
-  flex: 1;
-  height: 100%;
+  /* height: auto; */
   place-items: end;
-  text-align: start;
-  font-size: 55%;
-  opacity: 75%;
+  text-align: justify;
+  font-size: var(--fs-smallest);
+  opacity: 85%;
 }
 
 .about--span {
@@ -212,16 +221,15 @@ footer {
 #audioplayer {
   display: flex;
   height: 100svh;
-  padding: 0;
-  /* width: 85dvw; */
+  gap: 2rem;
 }
 
 .audio-player-left {
   display: flex;
   flex-direction: column;
-
+  flex: 0.5;
   img {
-    width: 25rem;
+    width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
     user-select: none;
@@ -231,28 +239,17 @@ footer {
 .album-wrapper {
   display: grid;
   color: var(--clr-light);
-  gap: 1rem;
-  padding: 1rem;
-  flex: 1;
+  gap: 0.25rem;
 }
 
 #album-folder {
-  font-size: 1.3rem;
-  height: 100%;
-  border: 0.05rem solid rgba(65, 65, 65, 0.219);
-  border-radius: 0.25rem;
-  padding: 0.5rem;
+  font-size: var(--fs-md);
 }
 
 .album-folders {
   display: grid;
-  gap: 1rem;
-  border-radius: 0.25rem;
+  gap: 0.25rem;
   cursor: pointer;
-}
-
-.album-folders-closed {
-  display: none;
 }
 
 .album-folders-header {
@@ -262,29 +259,21 @@ footer {
 }
 
 #show-all {
-  opacity: 75%;
-  color: var(--clr-lightest);
-  display: grid;
-  padding-inline: 0.5rem;
-  gap: 1rem;
-  border-radius: 0.25rem;
+  color: var(--clr-mid);
   cursor: pointer;
-  padding: 0.5rem;
 }
 
 .artwork-now-playing-wrapper {
   flex: 2;
   place-content: end;
-  padding: 1rem;
 }
 
 #now-playing-details {
   color: var(--clr-light);
   display: grid;
-  gap: 0.25rem;
-  padding-block: 1rem;
+  gap: 0.5rem;
+  padding-block: var(--pd-md);
   align-content: end;
-  padding-inline: 0.5rem;
 }
 
 #now-playing-details h3 {
@@ -294,17 +283,15 @@ footer {
 
 .music-list-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  grid-auto-rows: 10rem;
   flex: 1;
   overflow-y: scroll;
   place-items: center;
-  gap: 2rem;
-  padding-block: 2rem;
-  align-items: start;
 }
 
 .track-card {
-  height: 20rem;
+  height: 9rem;
   aspect-ratio: 1;
   display: flex;
   flex-direction: column;
@@ -316,34 +303,37 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: var(--clr-mid2);
-    padding: 1rem;
-    font-size: 125%;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    padding: var(--pd-sm);
+    font-size: var(--fs-sm);
+    border-bottom-left-radius: 0.15rem;
+    border-bottom-right-radius: 0.15rem;
   }
   img {
     height: 100%;
     aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 1rem;
+    border-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
   }
 }
 
 .track-card:hover {
   outline: 2px solid var(--clr-mid);
-  border-radius: 1rem;
+  border-radius: 0.15rem;
 }
 
 /* ----------------------------Audio player controls -----------------------*/
 
 audio {
   width: auto;
-  padding-inline: 1rem;
 }
 
 audio::-webkit-media-controls-panel {
-  width: 100%;
-  padding: 0;
+  padding: var(--pd-sm);
+  height: min-content;
+  background-color: var(--clr-mid2);
+  border-radius: 0.25rem;
 }
 
 audio::-webkit-media-controls-timeline-container {
@@ -359,14 +349,41 @@ audio::-webkit-media-controls-time-remaining-display {
 }
 
 audio::-webkit-media-controls-timeline {
-  background: transparent;
+  background-color: var(--clr-light);
+  border-radius: 0.25rem;
+  margin-inline: var(--pd-sm);
+  opacity: 100%;
+  box-shadow: none;
+  text-shadow: none;
 }
 
 audio::-webkit-media-controls-enclosure {
+  background-color: transparent;
   border-radius: 0;
-  svg {
-    color: var(--clr-light);
-  }
+}
+
+audio::-webkit-media-controls-play-button {
+  opacity: 100%;
+  background-color: var(--clr-lightest);
+  border-radius: 0.25rem;
+}
+
+audio::-webkit-media-controls-mute-button {
+  opacity: 100%;
+  background-color: var(--clr-lightest);
+  border-radius: 0.25rem;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  background-color: var(--clr-mid);
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background-color: var(--clr-light);
+  border-radius: 0.25rem;
+  padding: unset;
+  margin: 0 auto;
+  align-items: center;
 }
 
 /* ----------------------------ABOUT PAGE -----------------------*/
@@ -390,7 +407,7 @@ audio::-webkit-media-controls-enclosure {
   span {
     display: flex;
     width: 40rem;
-    font-size: 125%;
+    font-size: var(--fs-sm);
   }
 }
 
@@ -416,9 +433,11 @@ audio::-webkit-media-controls-enclosure {
 
 .music-resources--wrapper {
   display: grid;
+  gap: 1rem;
 
   div {
     display: flex;
+    flex-direction: column;
     flex: 1;
     p {
       flex: 1;
@@ -433,11 +452,8 @@ audio::-webkit-media-controls-enclosure {
   }
 }
 
-.presets-wrapper {
-  flex-direction: column;
+.resource-wrapper {
   gap: 1rem;
-  padding: 0rem;
-  margin: 0;
 }
 
 /* ----------------------------MEDIA PAGE -----------------------*/
@@ -446,11 +462,6 @@ audio::-webkit-media-controls-enclosure {
   display: grid;
   overflow-y: scroll;
   gap: 2rem;
-  font-size: 115%;
-
-  h3 {
-    font-size: 300%;
-  }
 }
 
 .media-section {
@@ -466,9 +477,12 @@ audio::-webkit-media-controls-enclosure {
   gap: 1rem;
   h3 {
     line-height: 1;
+    font-weight: 500;
+    opacity: 75%;
   }
   span {
-    font-size: 120%;
+    font-size: var(--fs-md);
+    font-weight: 300;
   }
 }
 
@@ -485,14 +499,10 @@ audio::-webkit-media-controls-enclosure {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* place-content: start; */
-  /* justify-content: space-between; */
-  /* gap: 0 1rem; */
 
   .react-tweet-theme {
     background-color: var(--clr-darkest-accent);
     flex: 0.25;
-    /* padding: 1rem; */
   }
 }
 
@@ -529,7 +539,7 @@ audio::-webkit-media-controls-enclosure {
   }
 
   .mobile-menu-wrapper b {
-    padding-left: 2rem;
+    padding-left: var(--pd-lg);
   }
   .mobile-menu-wrapper b:hover {
     color: var(--clr-mid);
@@ -538,7 +548,7 @@ audio::-webkit-media-controls-enclosure {
   .nav-mobile-open {
     position: fixed;
     background: rgba(0, 0, 0, 0.665);
-    font-size: 2.5rem;
+    font-size: var(--fs-lg);
     height: 100dvh;
     width: 100%;
     top: 0%;
@@ -549,7 +559,7 @@ audio::-webkit-media-controls-enclosure {
     flex-direction: column;
     z-index: 10;
     backdrop-filter: blur(25px);
-    padding: 1rem;
+    padding: var(--pd-md);
     place-content: center;
   }
 
@@ -594,40 +604,22 @@ audio::-webkit-media-controls-enclosure {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    padding: 2rem;
+    padding: var(--pd-lg);
+    img {
+      width: 100%;
+    }
   }
 
-  .album-folders-header {
-    padding-left: 0;
-  }
-  .audio-player-left img {
-    aspect-ratio: 1;
-    width: 100%;
-  }
-
-  #now-playing-details {
-    font-size: 105%;
-  }
   /* -------------LAYOUT DIV MOBILE --- FOR EACH SECTION ---------------*/
   .layout-div {
     section {
-      padding: 0rem;
+      padding: 0;
       width: 100svw;
       overflow: hidden;
-      padding-block: 1rem;
+      padding-block: var(--pd-md);
     }
     h2 {
-      display: flex;
-      font-size: 300%;
-      font-weight: 400;
-
-      color: var(--clr-mid);
-      padding-left: 1rem;
-    }
-
-    h3 {
-      font-size: 200%;
-      font-weight: 200;
+      padding-left: var(--pd-md);
     }
   }
   /* -------------------------------------------------------- */
@@ -647,7 +639,7 @@ audio::-webkit-media-controls-enclosure {
   }
   .about-content {
     display: grid;
-    padding: 1rem !important;
+    padding: var(--pd-md) !important;
     gap: 1rem;
   }
 
@@ -657,7 +649,7 @@ audio::-webkit-media-controls-enclosure {
     display: flex;
     flex-direction: column;
 
-    padding-block: 2rem;
+    padding-block: var(--pd-lg);
   }
 
   .media-section {
@@ -681,7 +673,7 @@ audio::-webkit-media-controls-enclosure {
   .media-CONTENT-tweets {
     justify-content: center;
     width: 100dvw;
-    padding: 2rem;
+    padding: var(--pd-lg);
     .react-tweet-theme {
       background-color: var(--clr-darkest-accent);
       width: 15dvw;
@@ -694,6 +686,9 @@ audio::-webkit-media-controls-enclosure {
     padding: 0;
   }
 
+  .music-list-wrapper {
+    overflow: hidden;
+  }
   .music-resources--wrapper {
     display: grid;
     /* width: 100%; */

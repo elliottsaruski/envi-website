@@ -29,11 +29,11 @@ function NavBar() {
           RESOURCES
         </NavLink>
       </nav>
-      <hr />
       <div className="navbar-links-only-desktop">
         <Links />
+        <hr />
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

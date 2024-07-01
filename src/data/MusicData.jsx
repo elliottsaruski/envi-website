@@ -97,7 +97,7 @@ const myTracks = [
   },
   {
     key: "DWISEEU ",
-    title: "DW, I SEE U (feat. Justin Scott)",
+    title: "DW, I SEE U (ft. Justin Scott)",
     album: "RETURN",
     artwork: returncover,
     src: dwiseeusrc,
