@@ -91,18 +91,35 @@ p {
   }
 }
 /* ----------------------------------------HOME----------------- */
-.home-wrapper {
+.landing-page-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto;
   height: 100dvh;
+  width: 100svw;
+  place-content: center;
+  place-items: center;
+  position: relative;
   overflow: hidden;
   color: var(--clr-light);
+  #enter-site-button {
+    position: absolute;
+    bottom: 35%;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: var(--fs-lg);
+    color: var(--clr-lightest);
+  }
+  canvas {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* place-content: center; */
+    /* place-items: center; */
+  }
 }
 
-/* ------------------------styles to apply if a user's device settings are set to reduced motion---------------------- */
+/* ------------------------apply if a user's device settings are set to reduced motion---------------------- */
 
 @media (prefers-reduced-motion) {
   body {
