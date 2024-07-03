@@ -18,10 +18,12 @@ function AudioPlayer() {
     <>
       <div className="audio-player-left">
         <h2>music</h2>
-        <AlbumFilter filter={filter} setFilter={setFilter} albums={albums} />
         <div className="artwork-now-playing-wrapper">
-          <img src={artworkThumbnail} alt="song artwork" />
-          <div id="now-playing-details">
+          <AlbumFilter filter={filter} setFilter={setFilter} albums={albums} />
+        </div>
+        <div id="now-playing-details">
+          <img src={artworkThumbnail} className="np-artwork" alt="song artwork" />
+          <div className="now-playing-text">
             <h4>{albumTitle}</h4>
             <h3>{songTitle}</h3>
             <h4>envi</h4>

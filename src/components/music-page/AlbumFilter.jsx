@@ -2,10 +2,7 @@
 function AlbumFilter({ albums, filter, setFilter }) {
   return (
     <div className="album-wrapper">
-      <div className="album-folders-header">
-        <p>filter by album</p>
-      </div>
-      {/* filter bar */}
+      <h5>Album Filter</h5>
       <div className="album-folders">
         {/* eslint-disable-next-line react/prop-types */}
         {albums.map((album) => {
@@ -18,10 +15,15 @@ function AlbumFilter({ albums, filter, setFilter }) {
             </div>
           );
         })}
-        <p onClick={() => setFilter("SHOW ALL")} id="show-all">
+      </div>
+      <button onClick={() => setFilter("SHOW ALL")} id="show-all">
+        <p
+          className={
+            filter === "SHOW ALL" ? "show-all-active" : "show-all-inactive"
+          }>
           SHOW ALL
         </p>
-      </div>
+      </button>
     </div>
   );
 }

@@ -1,21 +1,12 @@
-import enviIMG from "../assets/imgs/envi-mayfest-actionshot.jpg";
 import enviTextIMG from "../assets/imgs/envi-text-md.png";
 
 function AboutPage() {
   return (
     <section className="about--wrapper">
       <h2>About</h2>
-      <img
-        src={enviIMG}
-        aria-description="A DJ (envi) playing music behind a stage in the woods."
-        alt="enviIMG"
-      />
+
       <div className="about-content">
-        <img
-          src={enviTextIMG}
-          aria-description="A DJ (envi) playing music behind a stage in the woods."
-          alt="enviIMG"
-        />
+        <img src={enviTextIMG} aria-description="" alt="enviIMG" />
         <div className="spans">
           <span className="about--span">
             Born and raised in Miami, FL, envi, aka Elliott Saruski, is an

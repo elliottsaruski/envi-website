@@ -72,17 +72,13 @@ p {
   display: flex;
 
   h2 {
-    display: flex;
-    word-spacing: 1rem;
-    letter-spacing: -0.5rem;
-    font-size: var(--fs-lg-heading);
-    font-weight: 500;
+    font-size: var(--fs-md-heading);
     color: var(--clr-light);
-    text-transform: uppercase;
-    text-shadow: 0.25rem 0.05rem 1rem var(--clr-mid2);
     line-height: 1;
     user-select: none;
-    /* word-wrap: break-word; */
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 
   h3 {
@@ -161,8 +157,8 @@ nav {
   display: flex;
   font-size: var(--fs-md-heading);
   color: var(--clr-light);
-  width: min-content;
-  line-height: 1;
+  /* width: min-content;
+  line-height: 1; */
 }
 
 /* ACTIVE NAV LINK  */
@@ -170,6 +166,7 @@ nav {
   color: var(--clr-mid);
   text-decoration: underline;
   text-underline-offset: 0.25rem;
+  text-decoration-thickness: 1px;
 }
 
 .nav-wrapper a.active h1 {
@@ -230,19 +227,22 @@ footer {
 
 /* ----------------------------------MUSIC PAGE---------------------------- */
 
+/* wrapper for whole page */
 #audioplayer {
   display: flex;
   gap: 2rem;
 }
 
+/* left side of audio player (includes: album header, album filter, track artwork img, now playing content, and audio element) */
 .audio-player-left {
   display: flex;
-
   flex-direction: column;
-  gap: 0.85rem;
-  flex: 0.5;
+  justify-content: space-between;
+  flex: 0.65;
+
+  /* TRACK ARTWORK */
   img {
-    height: auto;
+    height: 25rem;
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
@@ -252,20 +252,28 @@ footer {
 
 .album-wrapper {
   display: grid;
+  gap: 0.15rem;
   color: var(--clr-light);
-  gap: 0.5rem;
-  width: max-content;
-  padding-top: var(--pd-sm);
+  h5 {
+    user-select: none;
+    font-weight: 300;
+    opacity: 69%;
+    font-style: italic;
+    font-size: var(--fs-sm);
+  }
 }
 
 #album-folder {
+  display: flex;
   font-size: var(--fs-md);
-  width: auto;
+  width: 100%;
 }
 
 .active-album {
   text-decoration: underline;
+  text-decoration-color: var(--clr-mid);
   text-underline-offset: 0.25rem;
+  text-decoration-thickness: 1px;
 }
 
 .album-folders {
@@ -274,23 +282,31 @@ footer {
   cursor: pointer;
 }
 
-.album-folders-header {
-  display: flex;
-  user-select: none;
-  opacity: 75%;
-}
-
 #show-all {
   color: var(--clr-mid);
+  background-color: var(--clr-dark-bg);
+
   cursor: pointer;
-  /* padding-top: 0.15rem; */
+  border-radius: 0.25rem;
+  width: fit-content;
+  border: 1px solid var(--clr-mid2);
+  box-shadow: none;
+  margin-block: var(--pd-sm);
+
+  p {
+    padding: var(--pd-sm);
+  }
 }
 
-.artwork-now-playing-wrapper {
-  flex: 1;
-  place-content: end;
-  /* justify-items: start; */
+.show-all-active {
+  color: var(--clr-lightest);
+  background-color: var(--clr-mid2);
+  border-color: var(--clr-light);
 }
+
+/* .artwork-now-playing-wrapper {
+
+} */
 
 #now-playing-details {
   color: var(--clr-light);
@@ -432,36 +448,32 @@ audio::-webkit-media-controls-volume-slider {
 /* ----------------------------ABOUT PAGE -----------------------*/
 
 .about--wrapper {
-  display: grid;
-  /* place-items: start; */
-  color: var(--clr-light);
+  display: flex;
+  flex-direction: column;
+  place-items: start;
   gap: 2rem;
+  color: var(--clr-light);
   overflow: hidden;
   overflow-y: scroll;
 
-  img {
-    height: 35rem;
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-  }
   span {
     display: flex;
     width: 30rem;
+    flex: 1;
     font-size: var(--fs-sm);
   }
 }
 
 .about-content {
   display: flex;
-  gap: 1rem;
-  height: min-content;
-  place-content: center;
-  place-items: center;
+  gap: 2rem;
+  place-content: start;
+  place-items: start;
   justify-content: start;
   align-items: start;
   img {
     height: 25rem;
+    object-fit: cover;
     aspect-ratio: 1;
   }
 }
@@ -582,8 +594,6 @@ audio::-webkit-media-controls-volume-slider {
 
   .mobile-menu-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .mobile-menu-wrapper b {
@@ -596,7 +606,7 @@ audio::-webkit-media-controls-volume-slider {
   .nav-mobile-open {
     position: fixed;
     background: rgba(0, 0, 0, 0.665);
-    font-size: var(--fs-lg);
+    font-size: var(--fs-sm-heading);
     height: 100dvh;
     width: 100%;
     top: 0%;
@@ -634,7 +644,6 @@ audio::-webkit-media-controls-volume-slider {
     z-index: 1000;
     box-shadow: none;
     border: none;
-    border-radius: 100rem;
     position: relative;
     /* right: 0rem;
     top: 0rem; */
@@ -659,15 +668,12 @@ audio::-webkit-media-controls-volume-slider {
     width: 100%;
     gap: 0.5rem;
     p {
-      font-size: var(--fs-smallest);
+      font-size: var(--fs-sm);
     }
-    img {
-      /* width: 15rem; */
-      width: 15rem;
-      height: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-    }
+  }
+
+  .audio-player-left {
+    gap: 0.5rem;
   }
 
   .music-list-wrapper {
@@ -682,6 +688,25 @@ audio::-webkit-media-controls-volume-slider {
   /* place-content: start; */
   /* justify-content: space-between; */
   /* } */
+
+  .artwork-now-playing-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 2rem;
+  }
+
+  #now-playing-details {
+    display: flex;
+    align-items: end;
+    gap: 2rem;
+    img {
+      /* width: 100%; */
+      height: auto;
+      width: 10rem;
+      aspect-ratio: 1;
+    }
+  }
 
   .track-card {
     height: 9rem;
