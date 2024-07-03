@@ -39,7 +39,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             errorElement={<ErrorPage />}
           />
           <Route
-            path="/musicresources"
+            path="/resources"
             element={<MusicResourcesPage />}
             errorElement={<ErrorPage />}
           />

@@ -12,7 +12,7 @@ function MusicResourcesPage() {
 
   return (
     <section className="music-resources--wrapper">
-      <h2>Music Resources</h2>
+      <h2>Resources</h2>
       <div>
         <div className="resource-wrapper">
           <h3>Presets</h3>

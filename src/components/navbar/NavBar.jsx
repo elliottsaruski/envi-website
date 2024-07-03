@@ -25,7 +25,7 @@ function NavBar() {
         <NavLink to="/about" className="navItem">
           ABOUT
         </NavLink>
-        <NavLink to="/musicresources" className="navItem">
+        <NavLink to="/resources" className="navItem">
           RESOURCES
         </NavLink>
       </nav>
