@@ -15,7 +15,7 @@ function OtherArt() {
           music.
         </span>
       </div>
-      <div className="media-CONTENT-other" ref={otherArtRef}>
+      <div className="media-CONTENT" ref={otherArtRef}>
         {/* display other work material */}
       </div>
     </div>

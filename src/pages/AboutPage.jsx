@@ -4,9 +4,7 @@ function AboutPage() {
   return (
     <section className="about--wrapper">
       <h2>About</h2>
-
       <div className="about-content">
-        <img src={enviTextIMG} aria-description="" alt="enviIMG" />
         <div className="spans">
           <span className="about--span">
             Born and raised in Miami, FL, envi, aka Elliott Saruski, is an
@@ -24,6 +22,9 @@ function AboutPage() {
             the name {"ruski"}. Later releasing music under the name {"null"}.
             Fast forward a year and the project transforms into {"'envi'"}.
           </span>
+        </div>
+        <div className="about-img-wrapper">
+          <img src={enviTextIMG} aria-description="" alt="enviIMG" />
         </div>
       </div>
     </section>

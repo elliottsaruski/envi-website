@@ -20,15 +20,21 @@ function AudioPlayer() {
         <h2>music</h2>
         <div className="artwork-now-playing-wrapper">
           <AlbumFilter filter={filter} setFilter={setFilter} albums={albums} />
-        </div>
-        <div id="now-playing-details">
-          <img src={artworkThumbnail} className="np-artwork" alt="song artwork" />
-          <div className="now-playing-text">
-            <h4>{albumTitle}</h4>
-            <h3>{songTitle}</h3>
-            <h4>envi</h4>
+          <div className="artwork-wrapper">
+            <img
+              src={artworkThumbnail}
+              className="np-artwork"
+              alt="song artwork"
+            />
           </div>
         </div>
+        <div className="now-playing-text">
+          <h4>{albumTitle}</h4>
+          <h3>{songTitle}</h3>
+          <h4>envi</h4>
+        </div>
+        {/* <div id="now-playing-details"> */}
+        {/* </div> */}
         <audio
           ref={audioRef}
           controls

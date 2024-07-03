@@ -49,7 +49,7 @@ function ReturnEP() {
       </div>
       <div
         style={{ width: "25rem", margin: "0 auto" }}
-        className="media-CONTENT-promo"
+        className="media-CONTENT"
         id="return-container"
         ref={returnEPRef}>
         {/* div to display branding and promo material */}
