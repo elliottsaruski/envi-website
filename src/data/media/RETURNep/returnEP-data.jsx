@@ -1,8 +1,10 @@
+import returnEPcover from "../../../assets/music/artworks/RETURN art.jpg";
+
 const returnAnimations = [
   {
     id: "RETURN_RETURN",
     mediaType: "video",
-    src: "1SuH9yp_UXVLxX0BAI-VOeAa3UcHbS7hY",
+    src: "QwHm59i2k4o",
   },
   {
     id: "RETURN_SERENITY",
@@ -35,12 +37,11 @@ const returnImages = [
   {
     id: "RETURN COVER",
     mediaType: "image",
-    src: "15YFKJWAPNCn0KeKCMDtPrLSLiO5n5jEF",
+    src: returnEPcover,
   },
   {
     id: "DW I SEE U COVER",
     mediaType: "image",
-    src: "175CY6onqZ7v2G-j3mVgOhUjnxWCaDWW4",
   },
 ];
 

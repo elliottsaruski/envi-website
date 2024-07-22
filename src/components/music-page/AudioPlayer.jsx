@@ -18,15 +18,8 @@ function AudioPlayer() {
     <>
       <div className="audio-player-left">
         <h2>music</h2>
-        <div className="artwork-now-playing-wrapper">
-          <AlbumFilter filter={filter} setFilter={setFilter} albums={albums} />
-          <div className="artwork-wrapper">
-            <img
-              src={artworkThumbnail}
-              className="np-artwork"
-              alt="song artwork"
-            />
-          </div>
+        <div className="artwork-wrapper">
+          <img src={artworkThumbnail} alt="song artwork" />
         </div>
         <div className="now-playing-text">
           <h4>{albumTitle}</h4>
@@ -42,32 +35,38 @@ function AudioPlayer() {
           autoPlay
           src={audioSrc}></audio>
       </div>
-      <div className="music-list-wrapper">
-        {myTracks
-          .filter((track) => {
-            if (track.album === filter) return track;
-            else if (filter === "SHOW ALL") return myTracks;
-          })
-          .map((track) => {
-            return (
-              <div
-                className="track-card"
-                key={track.key}
-                onClick={() => {
-                  setArtworkThumbnail(track.artwork);
-                  setAudioSrc(track.src);
-                  setSongTitle(track.title);
-                  setAlbumTitle(track.album);
-                  // setIsAudioPlaying(true);
-                }}>
-                <img src={track.artwork} alt="track-artwork-thumbnail" />
-                <div className="track-details">
-                  <p>{track.title}</p>
-                  {/* <p>{track.album}</p> */}
+
+      <div className="filter-and-music-list-wrapper">
+        <div className="album-filter-wrapper">
+          <AlbumFilter filter={filter} setFilter={setFilter} albums={albums} />
+        </div>
+        <div className="music-list-wrapper">
+          {myTracks
+            .filter((track) => {
+              if (track.album === filter) return track;
+              else if (filter === "SHOW ALL") return myTracks;
+            })
+            .map((track) => {
+              return (
+                <div
+                  className="track-card"
+                  key={track.key}
+                  onClick={() => {
+                    setArtworkThumbnail(track.artwork);
+                    setAudioSrc(track.src);
+                    setSongTitle(track.title);
+                    setAlbumTitle(track.album);
+                    // setIsAudioPlaying(true);
+                  }}>
+                  <img src={track.artwork} alt="track-artwork-thumbnail" />
+                  <div className="track-details">
+                    <p>{track.title}</p>
+                    {/* <p>{track.album}</p> */}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+        </div>
       </div>
     </>
   );

@@ -1,43 +1,6 @@
-import { useRef } from "react";
+import returnEPData from "../../data/media/RETURNep/returnEP-data";
 
 function ReturnEP() {
-  const returnEPRef = useRef();
-
-  // useEffect(() => {
-  //   if (window && returnEPRef.current) {
-  //     window.cloudinary
-  //       .galleryWidget({
-  //         container: returnEPRef.current,
-  //         cloudName: "elliott-dev",
-  //         mediaAssets: [
-  //           {
-  //             tag: "return-animation",
-  //             mediaType: "video",
-  //           },
-  //         ],
-
-  //         aspectRatio: "9:16",
-  //         carouselLocation: "bottom",
-  //         carouselOffset: 10,
-  //         navigation: "always",
-  //         navigationButtonProps: {
-  //           shape: "rectangle",
-  //           iconColor: "#ffffff",
-  //           color: "#000",
-  //           size: 52,
-  //           navigationPosition: "offset",
-  //           navigationOffset: 12,
-  //         },
-  //         themeProps: {
-  //           primary: "#000000",
-  //           active: "#777777",
-  //         },
-  //         carouselStyle: "indicators",
-  //       })
-  //       .render();
-  //   }
-  // });
-
   return (
     <div className="media-section">
       <div className="media-title-span">
@@ -46,13 +9,23 @@ function ReturnEP() {
           My latest release, RETURN, features 6 animations made in Blender 3D
           and composited in Davinci Resolve.
         </span>
+        <img src={returnEPData.returnImages[0].src} alt="" />
       </div>
-      <div
-        style={{ width: "25rem", margin: "0 auto" }}
-        className="media-CONTENT"
-        id="return-container"
-        ref={returnEPRef}>
-        {/* div to display branding and promo material */}
+      <div className="media-CONTENT" id="return-container">
+        {returnEPData.returnAnimations.map((video) => {
+          return (
+            <iframe
+              key={video.id}
+              width="350"
+              height="600"
+              src={`https://www.youtube.com/embed/${video.src}`}
+              title="YouTube video player"
+              frameBorder="0"
+              // allow="encrypted-media"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen></iframe>
+          );
+        })}
       </div>
     </div>
   );

@@ -82,7 +82,7 @@ function MobileNav() {
           <Link to="/about">
             <motion.p variants={VAR.navItem}>ABOUT</motion.p>
           </Link>
-          <Link to="/musicresources">
+          <Link to="/resources">
             <motion.p variants={VAR.navItem}>RESOURCES</motion.p>
           </Link>
           <Links />
