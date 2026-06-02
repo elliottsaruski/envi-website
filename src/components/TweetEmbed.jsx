@@ -6,7 +6,7 @@ function TweetEmbed({ tweetId }) {
   useEffect(() => {
     if (window.twttr?.widgets) {
       window.twttr.widgets.createTweet(tweetId, ref.current, {
-        theme: "dark", // or "light"
+        theme: "dark",
         dnt: true,
       });
     }

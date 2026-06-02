@@ -1,5 +1,3 @@
-// import { Tweet } from "react-tweet";
-// import TweetErrorBoundary from "../TweetErrorBoundary.jsx";
 import blenderChallenge from "../../data/media/blender-challenge/blender-chal-data.jsx";
 import TweetEmbed from "../TweetEmbed.jsx";
 
