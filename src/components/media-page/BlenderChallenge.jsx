@@ -1,5 +1,7 @@
-import { Tweet } from "react-tweet";
+// import { Tweet } from "react-tweet";
+// import TweetErrorBoundary from "../TweetErrorBoundary.jsx";
 import blenderChallenge from "../../data/media/blender-challenge/blender-chal-data.jsx";
+import TweetEmbed from "../TweetEmbed.jsx";
 
 function BlenderChallenge() {
   return (
@@ -21,7 +23,7 @@ function BlenderChallenge() {
       <div className="media-CONTENT">
         {/* display 31 Day Blender 3D Challenge material */}
         {blenderChallenge.map((tweet) => {
-          return <Tweet key={tweet.id} id={tweet.src} />;
+          return <TweetEmbed key={tweet.id} tweetId={tweet.src} />;
         })}
       </div>
     </div>
