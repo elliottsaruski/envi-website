@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 
-// eslint-disable-next-line react/prop-types
 function AlbumFilter({ albums, filter, setFilter }) {
   const [filterOpen, setFilterOpen] = useState(false);
   return (

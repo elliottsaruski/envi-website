@@ -26,7 +26,7 @@ function R3FText() {
           {`ENVI`}
           <meshBasicMaterial>
             <GradientTexture
-              stops={[0, 1]} // As many stops as you want
+              stops={[0, 1]}
               colors={["hsla(40, 8%, 7%, 1)", "hsla(192, 100%, 52%, 1)"]}
             />
           </meshBasicMaterial>

@@ -1,18 +1,13 @@
 import { Link } from "react-router-dom";
-// import enviIMG from "../assets/imgs/envi-mayfest-actionshot.jpg";
-// import { FiMusic } from "react-icons/fi";
-// import { GrMultimedia } from "react-icons/gr";
-// import { BsInfoSquare } from "react-icons/bs";
-// import { TbFileMusic } from "react-icons/tb";
-import envitext from "../assets/imgs/envi-text-md.png";
+import { imageUrl } from "../utils/cloudinary";
 
 function HomePage() {
   return (
     <section id="home-page-wrapper">
       <div className="home-page-img-wrapper">
         <img
-          src={envitext}
-          aria-description="A DJ (envi) playing music behind a stage in the woods."
+          src={imageUrl("envi-text-md_t3dupt")}
+          aria-description="3d text of the artist name envi"
           alt="enviIMG"
         />
       </div>
@@ -21,22 +16,10 @@ function HomePage() {
           <p> Hi! I{"'"}m envi!</p>
         </div>
         <div className="home-page-links">
-          <Link to={"/music"}>
-            {/* <FiMusic /> */}
-            music
-          </Link>
-          <Link to={"/media"}>
-            {/* <GrMultimedia /> */}
-            media
-          </Link>
-          <Link to={"/about"}>
-            {/* <BsInfoSquare /> */}
-            about
-          </Link>
-          <Link to={"/resources"}>
-            {/* <TbFileMusic /> */}
-            resources
-          </Link>
+          <Link to={"/music"}>music</Link>
+          <Link to={"/media"}>media</Link>
+          <Link to={"/about"}>about</Link>
+          <Link to={"/resources"}>resources</Link>
         </div>
       </div>
     </section>

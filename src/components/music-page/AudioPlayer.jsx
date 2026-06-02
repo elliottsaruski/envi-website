@@ -1,11 +1,12 @@
 import { useState, useRef } from "react";
 import myTracks from "../../data/MusicData.jsx";
 
-import artworkThumbnailPlaceholder from "../../assets/music/artworks/previousReleasesCover.jpg";
+import artworkThumbnailPlaceholder from "../../assets/artworks/previousReleasesCover.jpg";
 import AlbumFilter from "./AlbumFilter.jsx";
+
 function AudioPlayer() {
   const [artworkThumbnail, setArtworkThumbnail] = useState(
-    artworkThumbnailPlaceholder
+    artworkThumbnailPlaceholder,
   );
   const [audioSrc, setAudioSrc] = useState();
   const [songTitle, setSongTitle] = useState("Select a Track!");
@@ -26,8 +27,6 @@ function AudioPlayer() {
           <h3>{songTitle}</h3>
           <h4>envi</h4>
         </div>
-        {/* <div id="now-playing-details"> */}
-        {/* </div> */}
         <audio
           ref={audioRef}
           controls
@@ -56,12 +55,10 @@ function AudioPlayer() {
                     setAudioSrc(track.src);
                     setSongTitle(track.title);
                     setAlbumTitle(track.album);
-                    // setIsAudioPlaying(true);
                   }}>
                   <img src={track.artwork} alt="track-artwork-thumbnail" />
                   <div className="track-details">
                     <p>{track.title}</p>
-                    {/* <p>{track.album}</p> */}
                   </div>
                 </div>
               );
