@@ -1,31 +1,13 @@
-import { audioUrl } from "../utils/cloudinary";
+import { audioUrl, imageUrl } from "../utils/cloudinary";
 
-//----------------ARTWORK IMPORT
-import returncover from "../assets/artworks/RETURN art.jpg";
-import ghostLoveCover from "../assets/artworks/GHOST LOVE COVER.jpg";
-import previousReleasesCover from "../assets/artworks/previousReleasesCover.jpg";
-import genericHedsCover from "../assets/artworks/tape covers/genericHeds.jpg";
-import ht3Cover from "../assets/artworks/tape covers/ht3.png";
-import ht4Cover from "../assets/artworks/tape covers/ht4.png";
-import ht5Cover from "../assets/artworks/tape covers/ht5.png";
-import ht6Cover from "../assets/artworks/tape covers/ht6.png";
-import ht7Cover from "../assets/artworks/tape covers/ht7.png";
-import ht8Cover from "../assets/artworks/tape covers/ht8.png";
-import ht9Cover from "../assets/artworks/tape covers/ht9.png";
-import ht10Cover from "../assets/artworks/tape covers/ht10.png";
-import ht11Cover from "../assets/artworks/tape covers/ht11.png";
-import ht12Cover from "../assets/artworks/tape covers/ht12.png";
-import ht14Cover from "../assets/artworks/tape covers/ht14.png";
-import ht15Cover from "../assets/artworks/tape covers/ht15.png";
-
-//------------------------ARRAY
 const myTracks = [
+  //   --------------------RETURN EP --------------------
   {
     key: "RETURN",
     title: "RETURN",
     album: "RETURN",
-    artwork: returncover,
-    src: audioUrl("envi-website/music/RETURN EP/RETURN_wd84w1"),
+    artwork: imageUrl("RETURN_art_kcwz8d"),
+    src: audioUrl("RETURN_wd84w1"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/return?in=envimusic/sets/return-ep",
@@ -38,8 +20,8 @@ const myTracks = [
     key: "SERENITY",
     title: "SERENITY",
     album: "RETURN",
-    artwork: returncover,
-    src: audioUrl("envi-website/music/RETURN EP/SERENITY_j2c1ug"),
+    artwork: imageUrl("RETURN_art_kcwz8d"),
+    src: audioUrl("SERENITY_j2c1ug"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/serenity?in=envimusic/sets/return-ep",
@@ -53,8 +35,8 @@ const myTracks = [
     key: "TREATMERIGHT",
     title: "TREATMERIGHT",
     album: "RETURN",
-    artwork: returncover,
-    src: audioUrl("envi-website/music/RETURN EP/TREATMERIGHT_wim0go"),
+    artwork: imageUrl("RETURN_art_kcwz8d"),
+    src: audioUrl("TREATMERIGHT_wim0go"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/treatmeright1?in=envimusic/sets/return-ep",
@@ -68,8 +50,8 @@ const myTracks = [
     key: "DWISEEU ",
     title: "DW, I SEE U (ft. Justin Scott)",
     album: "RETURN",
-    artwork: returncover,
-    src: audioUrl("envi-website/music/RETURN EP/dwiseeu_qdix9z"),
+    artwork: imageUrl("DWISEEUCOVER_uisd7t"),
+    src: audioUrl("dwiseeu_qdix9z"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/dw-i-see-u?in=envimusic/sets/return-ep",
@@ -83,8 +65,8 @@ const myTracks = [
     key: "UNDERWATER ",
     title: "UNDERWATER",
     album: "RETURN",
-    artwork: returncover,
-    src: audioUrl("envi-website/music/RETURN EP/UNDERWATER_pjzzxr"),
+    artwork: imageUrl("RETURN_art_kcwz8d"),
+    src: audioUrl("UNDERWATER_pjzzxr"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/underwater?in=envimusic/sets/return-ep",
@@ -98,8 +80,8 @@ const myTracks = [
     key: "EXPECTATIONS ",
     title: "EXPECTATIONS",
     album: "RETURN",
-    artwork: returncover,
-    src: audioUrl("envi-website/music/RETURN EP/EXPECTATIONS_mqebif"),
+    artwork: imageUrl("RETURN_art_kcwz8d"),
+    src: audioUrl("EXPECTATIONS_mqebif"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/expectations-1?in=envimusic/sets/return-ep",
@@ -114,8 +96,8 @@ const myTracks = [
     key: "HT2",
     title: "heds tape 2 (sub)",
     album: "Heds Tapes",
-    artwork: genericHedsCover,
-    src: audioUrl("envi-website/music/heds/HT2-envi_gchn7w"),
+    artwork: imageUrl("genericHeds_lz9uwq"),
+    src: audioUrl("HT2-envi_gchn7w"),
     links: {
       soundcloud: null,
     },
@@ -124,8 +106,8 @@ const myTracks = [
     key: "HT3",
     title: "heds tape 3 (sub)",
     album: "Heds Tapes",
-    artwork: ht3Cover,
-    src: audioUrl("envi-website/music/heds/HT3-envi_nlddbt"),
+    artwork: imageUrl("ht3_grgegr"),
+    src: audioUrl("HT3-envi_nlddbt"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht3-envi-sub?in=envimusic/sets/heds-tape-subs",
@@ -135,8 +117,8 @@ const myTracks = [
     key: "HT4",
     title: "heds tape 4 (sub)",
     album: "Heds Tapes",
-    artwork: ht4Cover,
-    src: audioUrl("envi-website/music/heds/HT4-envi_levgpa"),
+    artwork: imageUrl("ht4_tl4jmm"),
+    src: audioUrl("HT4-envi_levgpa"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht4-envi-sub?in=envimusic/sets/heds-tape-subs",
@@ -146,8 +128,8 @@ const myTracks = [
     key: "HT5",
     title: "heds tape 5 (sub)",
     album: "Heds Tapes",
-    artwork: ht5Cover,
-    src: audioUrl("envi-website/music/heds/HT5-envi_jfkkej"),
+    artwork: imageUrl("ht5_wogc3b"),
+    src: audioUrl("HT5-envi_jfkkej"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht5-envi-sub?in=envimusic/sets/heds-tape-subs",
@@ -157,8 +139,8 @@ const myTracks = [
     key: "HT6",
     title: "heds tape 6 (on tape)",
     album: "Heds Tapes",
-    artwork: ht6Cover,
-    src: audioUrl("envi-website/music/heds/HT6-envi_agv9so"),
+    artwork: imageUrl("ht6_r7jugm"),
+    src: audioUrl("HT6-envi_agv9so"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht6-envi-on-tape?in=envimusic/sets/heds-tape-subs",
@@ -169,8 +151,8 @@ const myTracks = [
     key: "HT7",
     title: "heds tape 7 (sub)",
     album: "Heds Tapes",
-    artwork: ht7Cover,
-    src: audioUrl("envi-website/music/heds/HT7-envi_nzacr8"),
+    artwork: imageUrl("ht7_vbeyni"),
+    src: audioUrl("HT7-envi_nzacr8"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht7-envi-sub?in=envimusic/sets/heds-tape-subs",
@@ -180,8 +162,8 @@ const myTracks = [
     key: "HT8",
     title: "heds tape 8 (sub)",
     album: "Heds Tapes",
-    artwork: ht8Cover,
-    src: audioUrl("envi-website/music/heds/HT8-envi_alngkj"),
+    artwork: imageUrl("ht8_gn4vky"),
+    src: audioUrl("HT8-envi_alngkj"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht8-envi-sub?in=envimusic/sets/heds-tape-subs",
@@ -191,8 +173,8 @@ const myTracks = [
     key: "HT9",
     title: "heds tape 9 (on tape)",
     album: "Heds Tapes",
-    artwork: ht9Cover,
-    src: audioUrl("envi-website/music/heds/HT9-envi_eafswq"),
+    artwork: imageUrl("ht9_pkdbfs"),
+    src: audioUrl("HT9-envi_eafswq"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht9-envi-on-tape?in=envimusic/sets/heds-tape-subs",
@@ -202,8 +184,8 @@ const myTracks = [
     key: "HT10",
     title: "heds tape 10 (on tape)",
     album: "Heds Tapes",
-    artwork: ht10Cover,
-    src: audioUrl("envi-website/music/heds/HT10-envi_kh58pq"),
+    artwork: imageUrl("ht10_qwtaiv"),
+    src: audioUrl("HT10-envi_kh58pq"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht10-envi-on-tape?in=envimusic/sets/heds-tape-subs",
@@ -213,8 +195,8 @@ const myTracks = [
     key: "HT11",
     title: "heds tape 11 (on tape)",
     album: "Heds Tapes",
-    artwork: ht11Cover,
-    src: audioUrl("envi-website/music/heds/HT11-envi_khzshj"),
+    artwork: imageUrl("ht11_wb4tij"),
+    src: audioUrl("HT11-envi_khzshj"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht11-envi-on-tape?in=envimusic/sets/heds-tape-subs",
@@ -224,8 +206,8 @@ const myTracks = [
     key: "HT12",
     title: "heds tape 12 (sub)",
     album: "Heds Tapes",
-    artwork: ht12Cover,
-    src: audioUrl("envi-website/music/heds/HT12-envi_o8s4z0"),
+    artwork: imageUrl("ht12_rsbhzf"),
+    src: audioUrl("HT12-envi_o8s4z0"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht12-envi-sub?in=envimusic/sets/heds-tape-subs",
@@ -235,8 +217,8 @@ const myTracks = [
     key: "HT13",
     title: "heds tape 13 (on tape)",
     album: "Heds Tapes",
-    artwork: genericHedsCover,
-    src: audioUrl("envi-website/music/heds/HT13-envi_qtad6p"),
+    artwork: imageUrl("ht3_grgegr"),
+    src: audioUrl("HT13-envi_qtad6p"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht13-envi-on-tape?in=envimusic/sets/heds-tape-subs",
@@ -246,8 +228,8 @@ const myTracks = [
     key: "HT14",
     title: "heds tape 14 (on tape)",
     album: "Heds Tapes",
-    artwork: ht14Cover,
-    src: audioUrl("envi-website/music/heds/HT14-envi_uud8av"),
+    artwork: imageUrl("ht14_uj2wtj"),
+    src: audioUrl("HT14-envi_uud8av"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht14-envi-on-tape?in=envimusic/sets/heds-tape-subs",
@@ -257,8 +239,8 @@ const myTracks = [
     key: "HT15",
     title: "heds tape 15 (sub)",
     album: "Heds Tapes",
-    artwork: ht15Cover,
-    src: audioUrl("envi-website/music/heds/HT15-envi_zllltj"),
+    artwork: imageUrl("ht15_qsf7xc"),
+    src: audioUrl("HT15-envi_zllltj"),
     links: {
       soundcloud:
         "https://soundcloud.com/envimusic/ht15-envi-sub?in=envimusic/sets/heds-tape-subs",
@@ -269,10 +251,8 @@ const myTracks = [
     key: "GHOSTLOVE ",
     title: "Ghost Love w/ sleepless & lorn",
     album: "Ghost Love",
-    artwork: ghostLoveCover,
-    src: audioUrl(
-      "envi-website/music/previous-releases/Ghost_Love_w_sleepless_lorn_pspyz0",
-    ),
+    artwork: imageUrl("ghost_love_artwork_rxx2i9"),
+    src: audioUrl("Ghost_Love_w_sleepless_lorn_pspyz0"),
     links: {
       spotify:
         "https://open.spotify.com/track/7fc9S43kYNxBWuf4isrI0d?si=5a85a2f9df464fdd",
@@ -284,9 +264,9 @@ const myTracks = [
   {
     key: "HOME",
     title: "home (youth)",
-    artwork: previousReleasesCover,
+    artwork: imageUrl("previousReleasesCover_yp6vd0"),
     album: "Previous Releases",
-    src: audioUrl("envi-website/music/previous-releases/home-youth_r1oejh"),
+    src: audioUrl("home-youth_r1oejh"),
     links: {
       soundcloud: "https://soundcloud.com/envimusic/homee",
       spotify:
@@ -298,9 +278,9 @@ const myTracks = [
   {
     key: "TRAPPED",
     title: "Trapped",
-    artwork: previousReleasesCover,
+    artwork: imageUrl("previousReleasesCover_yp6vd0"),
     album: "Previous Releases",
-    src: audioUrl("envi-website/music/previous-releases/trapped_pavyrn"),
+    src: audioUrl("trapped_pavyrn"),
     links: {
       soundcloud: "https://soundcloud.com/envimusic/trapped",
       spotify:
@@ -311,9 +291,9 @@ const myTracks = [
   {
     key: "FORGETFUL",
     title: "Forgetful",
-    artwork: previousReleasesCover,
+    artwork: imageUrl("previousReleasesCover_yp6vd0"),
     album: "Previous Releases",
-    src: audioUrl("envi-website/music/previous-releases/forgetful_gs1qec"),
+    src: audioUrl("forgetful_gs1qec"),
     links: {
       soundcloud: "https://soundcloud.com/envimusic/forgetful_envi",
       spotify:
@@ -325,9 +305,9 @@ const myTracks = [
   {
     key: "URANG",
     title: "u rang?",
-    artwork: previousReleasesCover,
+    artwork: imageUrl("previousReleasesCover_yp6vd0"),
     album: "Previous Releases",
-    src: audioUrl("envi-website/music/previous-releases/u_rang_lgfyha"),
+    src: audioUrl("u_rang_lgfyha"),
     links: {
       soundcloud: "https://soundcloud.com/envimusic/urang",
       spotify:
@@ -338,9 +318,9 @@ const myTracks = [
   {
     key: "SWANGSET",
     title: "swangset",
-    artwork: previousReleasesCover,
+    artwork: imageUrl("previousReleasesCover_yp6vd0"),
     album: "Previous Releases",
-    src: audioUrl("envi-website/music/previous-releases/swangset_w2k9k1"),
+    src: audioUrl("swangset_w2k9k1"),
     links: {
       soundcloud: "https://soundcloud.com/envimusic/swangset",
       spotify:
@@ -352,11 +332,9 @@ const myTracks = [
   {
     key: "ABSTRACTTHOUGHTS",
     title: "Abstract Thoughts",
-    artwork: previousReleasesCover,
+    artwork: imageUrl("previousReleasesCover_yp6vd0"),
     album: "Previous Releases",
-    src: audioUrl(
-      "envi-website/music/previous-releases/abstract_thoughts_vtvoug",
-    ),
+    src: audioUrl("abstract_thoughts_vtvoug"),
     links: {
       soundcloud: "https://soundcloud.com/envimusic/abstractthoughts",
       spotify:
@@ -368,9 +346,9 @@ const myTracks = [
   {
     key: "COALESCENCE",
     title: "Coalescence",
-    artwork: previousReleasesCover,
+    artwork: imageUrl("previousReleasesCover_yp6vd0"),
     album: "Previous Releases",
-    src: audioUrl("envi-website/music/previous-releases/coalescence_fism5y"),
+    src: audioUrl("coalescence_fism5y"),
     links: {
       soundcloud: "https://soundcloud.com/envimusic/coalescence",
       spotify:
