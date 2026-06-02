@@ -1,15 +1,6 @@
-import { Cloudinary } from "@cloudinary/url-gen";
-import { AdvancedImage } from "@cloudinary/react";
+import { imageUrl } from "../utils/cloudinary";
 
 function MusicResourcesPage() {
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: "elliott-dev",
-    },
-  });
-
-  const img = cld.image("resources/vitalpresets");
-
   return (
     <section className="music-resources--wrapper">
       <h2>Resources</h2>
@@ -19,7 +10,10 @@ function MusicResourcesPage() {
           <a
             href="https://envimusic.gumroad.com/l/vitalpresetsbyenvi"
             target="_blank">
-            <AdvancedImage cldImg={img} />
+            <img
+              src={imageUrl("resources/vitalpresets")}
+              alt="Vital Presets by envi"
+            />
             {/* <figcaption>Vital Presets by envi - FREE</figcaption> */}
           </a>
         </div>

@@ -1,5 +1,3 @@
-import returnEPcover from "../../../assets/music/artworks/RETURN art.jpg";
-
 const returnAnimations = [
   {
     id: "RETURN_RETURN",
@@ -33,16 +31,4 @@ const returnAnimations = [
   },
 ];
 
-const returnImages = [
-  {
-    id: "RETURN COVER",
-    mediaType: "image",
-    src: returnEPcover,
-  },
-  {
-    id: "DW I SEE U COVER",
-    mediaType: "image",
-  },
-];
-
-export default { returnAnimations, returnImages };
+export default { returnAnimations };

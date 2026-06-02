@@ -1,4 +1,5 @@
 import returnEPData from "../../data/media/RETURNep/returnEP-data";
+import { imageUrl } from "../../utils/cloudinary";
 
 function ReturnEP() {
   return (
@@ -9,7 +10,7 @@ function ReturnEP() {
           My latest release, RETURN, features 6 animations made in Blender 3D
           and composited in Davinci Resolve.
         </span>
-        <img src={returnEPData.returnImages[0].src} alt="" />
+        <img src={imageUrl("RETURN_art_kcwz8d")} alt="return ep artwork" />
       </div>
       <div className="media-CONTENT" id="return-container">
         {returnEPData.returnAnimations.map((video) => {
