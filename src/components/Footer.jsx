@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer>
-      <p>created by envi - 2024</p>
+      <p>© 2026 Elliott Saruski. All rights reserved.</p>
     </footer>
   );
 }
