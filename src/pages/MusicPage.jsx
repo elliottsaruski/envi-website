@@ -1,10 +1,15 @@
+import { motion } from "framer-motion";
 import AudioPlayer from "../components/music-page/AudioPlayer";
 
 function MusicPage() {
   return (
-    <section id="audioplayer">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
+    >
       <AudioPlayer />
-    </section>
+    </motion.div>
   );
 }
 

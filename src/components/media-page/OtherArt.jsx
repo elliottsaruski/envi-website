@@ -1,24 +1,24 @@
-import { useRef } from "react";
-
 function OtherArt() {
-  const otherArtRef = useRef();
-
   return (
-    <div className="media-section">
-      <div className="media-title-span">
-        <h3>Other Art</h3>
-        <span>
-          I find pleasure in creating every aspect of this project. Whether that
-          be mixing/mastering, art direction, or simply promotional materials,
-          you can find me adopting new softwares - or relying on ones I am
-          familiar with - to define how the listener might <em>SEE</em> my
-          music.
-        </span>
+    <section>
+      {/* Section label + description */}
+      <div className="mb-10">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">
+          OTHER ART
+        </p>
+        <p className="font-mono text-sm text-text/70 max-w-md leading-relaxed">
+          Whether mixing/mastering, art direction, or promotional materials —
+          every aspect of this project is crafted intentionally.
+        </p>
       </div>
-      <div className="media-CONTENT" ref={otherArtRef}>
-        {/* display other work material */}
+
+      {/* Placeholder */}
+      <div className="border border-dashed border-[#252525] flex items-center justify-center py-20">
+        <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground/30">
+          MORE COMING SOON
+        </p>
       </div>
-    </div>
+    </section>
   );
 }
 

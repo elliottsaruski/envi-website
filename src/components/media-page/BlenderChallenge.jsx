@@ -1,30 +1,38 @@
+import { motion } from "framer-motion";
 import blenderChallenge from "../../data/media/blender-challenge/blender-chal-data.jsx";
 import TweetEmbed from "../TweetEmbed.jsx";
 
 function BlenderChallenge() {
   return (
-    <div className="media-section">
-      <div className="media-title-span">
-        <h3>31 Day Blender 3D Challenge</h3>
+    <section>
+      {/* Section label + description */}
+      <div className="mb-10">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">
+          31 DAY BLENDER CHALLENGE
+        </p>
+        <p className="font-mono text-sm text-text/70 max-w-md leading-relaxed">
+          Exposure therapy through daily creation. Setting creative limitations,
+          time constraints, and overcoming the fear of sharing work publicly —
+          posted each day to X.
+        </p>
+      </div>
 
-        <span>
-          The goal here was to enter a state exposure therapy while
-          simulatneously practicing a new-ish software. Imposter syndrome,
-          social criticism, perfectionism, and creative-blocks, all contributing
-          to a self I did not respect as an artist. <br /> <br /> This exercise
-          taught me the power of setting creative limitations - including time
-          restraints - and overcoming the fear of the <em>social</em> side of
-          being an artist, that being the aspect of sharing work with the world,
-          hence the posting on Twitter/X.
-        </span>
+      {/* Tweet grid */}
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+        {blenderChallenge.map((tweet, i) => (
+          <motion.div
+            key={tweet.id}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.4, delay: Math.min(i * 0.04, 0.3) }}
+            className="break-inside-avoid"
+          >
+            <TweetEmbed tweetId={tweet.src} />
+          </motion.div>
+        ))}
       </div>
-      <div className="media-CONTENT">
-        {/* display 31 Day Blender 3D Challenge material */}
-        {blenderChallenge.map((tweet) => {
-          return <TweetEmbed key={tweet.id} tweetId={tweet.src} />;
-        })}
-      </div>
-    </div>
+    </section>
   );
 }
 
